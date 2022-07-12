@@ -1,7 +1,14 @@
 import React from "react";
+import Link from "next/link";
+
+/* Constants */
+import { TMDB_IMG } from "../../../../constants/common";
 
 /* Components */
 import { Button } from "@mui/material";
+
+/* Util */
+import { typeCheck } from "../../../../util/typeCheck";
 
 const SlideItem = ({
   id,
@@ -13,6 +20,8 @@ const SlideItem = ({
   name,
   media_type,
 }) => {
+  const route_type = typeCheck(media_type);
+
   return (
     <>
       {/* Laptops */}
@@ -39,11 +48,11 @@ const SlideItem = ({
               {overview}
             </p>
 
-            {/* <Link onClick={getItemInfo} to={`/${route_type}/${id}`}> */}
-            <Button variant="contained" className="btn-primary">
-              View Detail
-            </Button>
-            {/* </Link> */}
+            <Link href={`/${route_type}/${id}`}>
+              <Button variant="contained" className="btn-primary">
+                View Detail
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
@@ -52,7 +61,7 @@ const SlideItem = ({
       <div
         className="block md:hidden h-full w-full bg-top bg-no-repeat bg-cover relative"
         style={{
-          backgroundImage: `url(https://image.tmdb.org/t/p/original/${poster_path})`,
+          backgroundImage: `url(${TMDB_IMG}original/${poster_path})`,
         }}
       >
         <div className="slide--hero-wrapper px-6 lg:px-16 flex items-center justify-start absolute w-full left-0 text-wah">
@@ -72,11 +81,11 @@ const SlideItem = ({
               {overview}
             </p>
 
-            {/* <Link onClick={getItemInfo} to={`/${route_type}/${id}`}> */}
-            <Button variant="contained" className="btn-primary">
-              View Detail
-            </Button>
-            {/* </Link> */}
+            <Link href={`/${route_type}/${id}`}>
+              <Button variant="contained" className="btn-primary">
+                View Detail
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
