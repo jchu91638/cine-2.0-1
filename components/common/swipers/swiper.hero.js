@@ -6,12 +6,13 @@ import { Swiper } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/pagination";
 
 const SwiperHero = (props) => {
   return (
     <Swiper
       modules={[Pagination, Autoplay]}
-      className="mySwiper"
+      className="mySwiper w-full h-full"
       loop={true}
       pagination={{
         clickable: true,

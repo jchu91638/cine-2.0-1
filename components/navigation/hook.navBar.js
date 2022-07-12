@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
@@ -10,6 +11,8 @@ const Hook = () => {
     const router = useRouter();
     const dispatch = useDispatch();
     const { current } = useSelector((state) => state.navActivate);
+
+    const [ navToggle , setNavToggle ] = useState(false)
 
     const handleNavActivate = (item) => {
         dispatch(activeNavItem(item));
@@ -26,11 +29,13 @@ const Hook = () => {
     return [
         isHome,
         current,
+        navToggle,
 
         /* actions */
 
         handleNavActivate,
-        navigateToHome
+        navigateToHome,
+        setNavToggle
     ]
 }
 

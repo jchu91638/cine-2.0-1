@@ -3,6 +3,10 @@ body {
     margin: 0 !important;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -10,7 +14,7 @@ a {
 
 ul {
     margin: 0 !important;
-    padding: 0 !important;
+    padding-left: 0 !important;
 }
 
 /* Nav */
@@ -25,4 +29,15 @@ ul {
     height: 100.5%;
     max-width: unset!important;
     top: -3px;
+}
+
+/* Swiper override */
+.swiper-pagination-bullet-active {
+    background: #21e6c1!important;
+}
+
+.swiper-pagination-bullet {
+    border-radius: 2px!important;
+    height: 3px!important;
+    width: 40px!important;
 }
