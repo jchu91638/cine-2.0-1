@@ -68,7 +68,7 @@ const SlideItem = ({
               {title ? title : name}
             </h1>
 
-            <p className="w-full md:w-[55%] lg:w-[45%] drop-shadow-text">
+            <p className="w-full md:w-[55%] lg:w-[45%] drop-shadow-text line-clamp-5">
               {overview}
             </p>
 
