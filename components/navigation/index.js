@@ -28,9 +28,9 @@ const NavBar = () => {
   ] = Hook();
 
   return (
-    <nav className="absolute top-0 left-0 right-0 z-[500]">
+    <nav className={`absolute top-0 left-0 right-0 z-[500] ${!isHome && 'bg-dark'}`}>
       {/* Laptops view */}
-      <div className="container md:px-4 lg:px-4 xl:px-0 py-4 hidden lg:flex justify-between items-center">
+      <div className={`container md:px-4 lg:px-4 xl:px-0  hidden lg:flex justify-between items-center ${isHome ? 'py-4' : 'py-2'}`}>
         <Image
           src={logo}
           alt="CINE logo"

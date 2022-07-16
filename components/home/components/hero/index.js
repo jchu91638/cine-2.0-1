@@ -9,19 +9,19 @@ import { SwiperSlide } from "swiper/react";
 import SlideItem from "./SlideItem";
 import { CircularProgress } from "@mui/material";
 
-const Hero = () => {
-  const { data, error, isLoading } = useGetTrendingAllDayQuery();
+const Hero = ({ data, error, loading, slideItemData }) => {
+  // const { data, error, isLoading } = useGetTrendingAllDayQuery();
 
   let slideItems;
   if (data) {
-    slideItems = data?.results?.slice(0, 5).map((item) => {
+    slideItems = slideItemData.map((item) => {
       return (
         <SwiperSlide key={item.id}>
           <SlideItem
             id={item.id}
             index={data.results.indexOf(item)}
             backdrop_path={item.backdrop_path}
-            poster_path = {item.poster_path}
+            poster_path={item.poster_path}
             title={item.title}
             overview={item.overview}
             name={item.name}
@@ -35,7 +35,7 @@ const Hero = () => {
   return (
     <section className="">
       <div className="pt-20 bg-dark h-[700px] lg:h-[700px] flex justify-center items-center">
-        {isLoading && <CircularProgress />}
+        {loading && <CircularProgress />}
 
         {data && <SwiperHero>{slideItems}</SwiperHero>}
       </div>

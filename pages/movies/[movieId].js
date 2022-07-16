@@ -1,10 +1,12 @@
 import React from "react";
 import Head from "next/head";
-import { GetServerSideProps } from "next";
 
 /* Constants */
 import { MOVIE_DETAIL } from "../../constants/apiLinks";
 import { API_KEY } from "../../constants/common";
+
+/* Components */
+import { MovieDetailPage } from "../../components";
 
 const MovieDetail = ({ id, movie }) => {
 
@@ -40,7 +42,11 @@ const MovieDetail = ({ id, movie }) => {
         <meta property="twitter:description" content={overview} />
         <meta property="twitter:image" content={backdrop_path} />
       </Head>
-      <h1>{movie?.title}</h1>
+      <section className="mt-[75px]">
+        <MovieDetailPage
+          movieId = {id}
+        />
+      </section>
     </>
   );
 };
