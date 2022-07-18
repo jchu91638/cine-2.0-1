@@ -13,7 +13,7 @@ const TorrentItem = ({ item }) => {
       <div className="flex flex-col">
         <button
           data-place={item.size}
-          className="cursor-pointer py-1 px-4 font-primary bg-primary shadow shadow-light text-cfs-1 rounded-md text-wah"
+          className="torrent-btn cursor-pointer py-1 px-4 font-primary text-cfs-1 rounded-md text-wah"
         >
           <span className="font-bold">{item.quality}</span>.
           <span className="capitalize">{item.type}</span>
@@ -27,12 +27,13 @@ const TorrentItem = ({ item }) => {
 const DetailTorrent = ({ imdbID }) => {
   const { data, error, torrentList } = Hook(imdbID);
 
-  if (!data) return <p>Fetching torrents.</p>;
-  if (error) return <p>No torrents found.</p>;
+  if (!data) return <p>Fetching torrents 😉</p>;
+  if (error || torrentList.length === 0) return <p>No torrents found 😑</p>;
 
+  console.log({torrentList})
   return (
     <>
-      <div className="flex gap-x-2">
+      <div className="flex flex-wrap gap-2">
         {data &&
           torrentList.map((item, index) => {
             return <TorrentItem key={index} item={item} />;

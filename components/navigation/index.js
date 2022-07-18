@@ -77,7 +77,7 @@ const NavBar = () => {
           className="cursor-pointer"
         />
 
-        <ul className={`nav-items transition-all bg-gradient-to-b from-dark to-secondary absolute top-16 left-0 right-0 list-none font-primary font-medium gap-x-4 pb-4 ${navToggle ? 'opacity-100' : 'opacity-0'}`}>
+        <ul className={`nav-items transition-all bg-gradient-to-b from-dark to-secondary absolute top-16 left-0 right-0 list-none font-primary font-medium gap-x-4 pb-4 ${navToggle ? 'visible opacity-100' : 'opacity-0 invisible'}`}>
           {navItems.map((item, index) => {
             return (
               <li

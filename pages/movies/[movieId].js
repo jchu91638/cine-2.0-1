@@ -42,7 +42,7 @@ const MovieDetail = ({ id, movie }) => {
         <meta property="twitter:description" content={overview} />
         <meta property="twitter:image" content={backdrop_path} />
       </Head>
-      <section className="mt-[60px]">
+      <section className="mt-[70px] lg:mt-[60px]">
         <MovieDetailPage
           movieId = {id}
         />

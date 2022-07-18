@@ -35,33 +35,33 @@ const DetailHero = ({
           style={{ backgroundImage: `url(${backgroundImage})` }}
         >
           <div className="detail--heroWrapper text-white h-full">
-            <div className="container pt-8 pb-48 max-w-[90rem] mx-auto px-14">
-              <div className="flex gap-x-8">
+            <div className="container pt-8 pb-48 max-w-[90rem] mx-auto px-5 lg:px-14">
+              <div className="flex mt-8 lg:mt-0 flex-col md:flex-row gap-x-8 gap-y-8 lg:gap-y-0">
                 <img
-                  className="rounded-md relative min-w-[18.75rem] max-h-[450px] h-[28.125rem] w-[18.75rem]"
+                  className="rounded-md relative h-[14.0625rem] min-h-[225px] min-w-[9.375rem] w-[9.375rem] lg:min-w-[18.75rem] lg:max-h-[450px] lg:h-[28.125rem] lg:w-[18.75rem]"
                   src={poster}
                   alt={`${title}'s poster`}
                 />
                 <div className="flex flex-col gap-y-8">
                   <div>
                     <div>
-                      <h1 className="text-4xl font-heading font-bold">
-                        {title}{" "}
-                        <span className="text-[1.625rem] font-normal ml-[15px]">
+                      <h1 className="text-cfs-5 lg:text-4xl font-heading font-bold mb-2 flex gap-x-4 flex-wrap items-end">
+                        <span>{title}</span>
+                        <span className="text-cfs-4 lg:text-cfs-5 font-normal">
                           ( {releasedYear} )
                         </span>
                       </h1>
                     </div>
 
-                    <div className="flex gap-x-4">
+                    <div className="flex flex-wrap gap-x-4 gap-y-2 items-center justify-start lg:justify-start">
                       {contentRating && (
-                        <div className="border border-solid border-warning text-warning font-bold p-[2px]">
+                        <div className="text-[12px] lg:text-cfs-1 border border-solid border-warning text-warning font-bold p-[2px]">
                           <p>{contentRating}</p>
                         </div>
                       )}
 
                       <p className="">
-                        <span className="flex gap-x-1">
+                        <span className="flex flex-wrap gap-1">
                           {genres?.map((item) => {
                             let type =
                               item.name === "Science Fiction"
@@ -83,7 +83,7 @@ const DetailHero = ({
 
                       <div>
                         {runtime !== "m" && runtime !== "undefinedm" && (
-                          <p className="flex justify-center items-center gap-x-1 text-base">
+                          <p className="flex justify-center items-center gap-x-1 text-[0.8rem] lg:text-cfs-1">
                             <AccessTimeSharp className="w-4" />
                             {runtime}
                           </p>
@@ -106,8 +106,8 @@ const DetailHero = ({
                           </p>
                         )}
                       </div>
-                      <div className="w-1/2">
-                        <h1 className="text-gray text-[1.375rem] font-bold font-heading">
+                      <div className="w-fll lg:w-1/2">
+                        <h1 className="text-gray text-cfs-3 lg:text-cfs-4 font-bold font-heading mb-1">
                           Overview
                         </h1>
                         <p>{overview}</p>
@@ -134,7 +134,7 @@ const DetailHero = ({
                   </div>
 
                   <div>
-                    <h1 className="text-gray text-[1.375rem] font-bold font-heading">
+                    <h1 className="text-gray text-cfs-3 lg:text-cfs-4 font-bold font-heading  mb-1">
                       Download
                     </h1>
 
