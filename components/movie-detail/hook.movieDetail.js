@@ -9,7 +9,19 @@ const Hook = (id) => {
         gmd_error,
         gmd_loading,
 
-        title
+        title,
+        heroBackground,
+        poster,
+        releasedYear,
+        contentRating,
+        genres,
+        runtime,
+        status,
+        tagline,
+        overview,
+        rating,
+        popularity,
+        imdbID
     }  = getMovieDetail(id)
 
     return {
@@ -18,7 +30,19 @@ const Hook = (id) => {
         gmd_error,
         gmd_loading,
 
-        title
+        title,
+        heroBackground,
+        poster,
+        releasedYear,
+        contentRating,
+        genres,
+        runtime,
+        status,
+        tagline,
+        overview,
+        rating,
+        popularity,
+        imdbID
         //#endregion
     }
 }

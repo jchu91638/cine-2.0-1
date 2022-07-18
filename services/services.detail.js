@@ -7,7 +7,7 @@ export const api_movieDetail = createApi({
     baseQuery : fetchBaseQuery({ baseUrl : MOVIE_DETAIL}),
     endpoints : (builder) => ({
         getMovieDetail : builder.query({
-            query : (movieId) => `${movieId}?api_key=${API_KEY}`
+            query : (movieId) => `${movieId}?api_key=${API_KEY}&append_to_response=videos,releases,content_ratings`
         })
     })
 })

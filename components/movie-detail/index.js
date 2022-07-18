@@ -15,7 +15,19 @@ const MovieDetail = ({
         gmd_error,
         gmd_loading,
 
-        title
+        title,
+        heroBackground,
+        poster,
+        releasedYear,
+        contentRating,
+        genres,
+        runtime,
+        status,
+        tagline,
+        overview,
+        rating,
+        popularity,
+        imdbID
         //#endregion
     } = Hook(movieId)
 
@@ -27,6 +39,18 @@ const MovieDetail = ({
                 loading = {gmd_loading}
 
                 title = {title}
+                backgroundImage = {heroBackground}
+                poster = {poster}
+                releasedYear = {releasedYear}
+                contentRating = {contentRating}
+                genres = {genres}
+                runtime = {runtime}
+                status = {status}
+                tagline = {tagline}
+                overview = {overview}
+                rating = {rating}
+                popularity = {popularity}
+                imdbID = {imdbID}
             />
         </>
     );

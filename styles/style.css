@@ -1,43 +1,85 @@
 /* General */
 body {
-    margin: 0 !important;
+  margin: 0 !important;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 ul {
-    margin: 0 !important;
-    padding-left: 0 !important;
+  margin: 0 !important;
+  padding-left: 0 !important;
 }
 
-/* Nav */
-.nav-items a{
-    padding: 15px;
-    letter-spacing: 1px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+p {
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+}
+
+button {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+/*
+ *  Nav
+ */
+.nav-items a {
+  padding: 15px;
+  letter-spacing: 1px;
 }
 
 /* Home - Hero */
 .slide--hero-wrapper {
-    background: linear-gradient(180deg,#071e3d,rgba(7,30,61,.4) 40%);
-    height: 100.5%;
-    max-width: unset!important;
-    top: -3px;
+  background: linear-gradient(180deg, #071e3d, rgba(7, 30, 61, 0.4) 40%);
+  height: 100.5%;
+  max-width: unset !important;
+  top: -3px;
 }
 
 /* Swiper override */
 .swiper-pagination-bullet-active {
-    background: #21e6c1!important;
+  background: #21e6c1 !important;
 }
 
 .swiper-pagination-bullet {
-    border-radius: 2px!important;
-    height: 3px!important;
-    width: 40px!important;
+  border-radius: 2px !important;
+  height: 3px !important;
+  width: 40px !important;
+}
+
+/*
+ *  Detail Hero
+ */
+.detail--hero {
+  background-position: 100% 0;
+  background-size: 90%;
+}
+
+.detail--heroWrapper {
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  background: linear-gradient(
+    90deg,
+    #1c2a30 20%,
+    rgba(28, 42, 48, 0.8) 66.08%,
+    rgba(28, 42, 48, 0.5)
+  );
 }

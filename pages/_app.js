@@ -44,9 +44,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <StyledEngineProvider injectFirst>
       <Provider store={store}>
-        <NavBar/>
-        <Progress isAnimating={isAnimating}/>
-        <Component {...pageProps} />
+        <main className='font-primary'>
+          <NavBar/>
+          <Progress isAnimating={isAnimating}/>
+          <Component {...pageProps} />
+        </main>
       </Provider>
     </StyledEngineProvider>
   )

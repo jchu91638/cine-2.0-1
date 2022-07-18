@@ -6,4 +6,8 @@
     .btn-primary {
         @apply bg-danger capitalize font-primary font-bold text-cfs-1 hover:bg-danger hover:bg-opacity-80;
     }
+
+    .btn-outline {
+        @apply bg-transparent inline-flex font-primary border-2 border-solid font-bold text-cfs-1 capitalize border-primary text-primary min-w-[70px] w-[11rem];
+    }
 }
