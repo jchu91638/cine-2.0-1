@@ -102,7 +102,7 @@ const DetailHero = ({
                       <div>
                         {tagline && (
                           <p className="font-bold text-gray italic">
-                            " {tagline} "
+                            &ldquo; {tagline} &rdquo;
                           </p>
                         )}
                       </div>
