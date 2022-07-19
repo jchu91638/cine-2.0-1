@@ -35,10 +35,10 @@ const DetailHero = ({
           style={{ backgroundImage: `url(${backgroundImage})` }}
         >
           <div className="detail--heroWrapper text-white h-full">
-            <div className="container pt-8 pb-48 max-w-[90rem] mx-auto px-5 lg:px-14">
+            <div className="container pt-8 pb-48 max-w-[90rem] mx-auto px-5 md:px-14">
               <div className="flex mt-8 lg:mt-0 flex-col md:flex-row gap-x-8 gap-y-8 lg:gap-y-0">
                 <img
-                  className="rounded-md relative h-[14.0625rem] min-h-[225px] min-w-[9.375rem] w-[9.375rem] lg:min-w-[18.75rem] lg:max-h-[450px] lg:h-[28.125rem] lg:w-[18.75rem]"
+                  className="rounded-md relative h-[14.0625rem] min-h-[225px] min-w-[9.375rem] w-[9.375rem] md:h-[23.4375rem] md:h-p[375px] md:min-w-[15.625rem] md:w-[15.625rem] lg:min-w-[18.75rem] lg:max-h-[450px] lg:h-[28.125rem] lg:w-[18.75rem]"
                   src={poster}
                   alt={`${title}'s poster`}
                 />
