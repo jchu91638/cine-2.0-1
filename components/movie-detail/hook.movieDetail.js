@@ -1,8 +1,16 @@
-import React from 'react';
-
 import { getMovieDetail } from '../../intensions';
+import { useDispatch } from 'react-redux';
+
+/* Action */
+import { activeNavItem } from '../../modules/reducer.nav';
+
+/* Constant */
+import { navItems } from '../../constants/uiData';
 
 const Hook = (id) => {
+
+    const dispatch = useDispatch();
+    dispatch(activeNavItem(navItems[1]))
 
     const {
         gmd_data,

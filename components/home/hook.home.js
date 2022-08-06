@@ -1,9 +1,18 @@
-import React from 'react';
+import { useDispatch } from 'react-redux';
 
 /* intensions */
 import { getTrendingAllDay } from '../../intensions';
 
+/* Actions */
+import { activeNavItem } from '../../modules/reducer.nav';
+
+/* Constants */
+import { navItems } from '../../constants/uiData';
+
 const Hook = () => {
+
+    const dispatch = useDispatch();
+    dispatch(activeNavItem(navItems[0]));
 
     const {
         gta_data,
