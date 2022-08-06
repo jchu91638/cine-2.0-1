@@ -7,7 +7,7 @@ import {
   api_trendingAllDay,
   api_discoverMoviesGenres,
 } from "../services/services.home";
-import { api_movieDetail } from "../services/services.detail";
+import { api_movieDetail, api_seriesDetail } from "../services/services.detail";
 
 export const store = configureStore({
   reducer: {
@@ -15,12 +15,14 @@ export const store = configureStore({
     [api_discoverMoviesGenres.reducerPath]: api_discoverMoviesGenres.reducer,
     navActivate: navActiveReducer,
     [api_movieDetail.reducerPath]: api_movieDetail.reducer,
+    [api_seriesDetail.reducerPath] : api_seriesDetail.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware()
       .concat(api_trendingAllDay.middleware)
       .concat(api_discoverMoviesGenres.middleware)
-      .concat(api_movieDetail.middleware),
+      .concat(api_movieDetail.middleware)
+      .concat(api_seriesDetail.middleware)
 });
 
 setupListeners(store.dispatch);

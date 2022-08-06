@@ -1,4 +1,3 @@
-import React from "react";
 import { useGetMovieDetailQuery } from "../services/services.detail";
 import { TMDB_IMG, TMDB_IMG_RES } from "../constants/common";
 

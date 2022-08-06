@@ -1,0 +1,102 @@
+import { useGetSeriesDetailQuery } from "../services/services.detail";
+import { TMDB_IMG, TMDB_IMG_RES } from "../constants/common";
+
+/* Utils */
+import { timeConvert } from "../util/timeConvert";
+
+const IntGetSeriesDetail = (id) => {
+  const { data, error, isLoading } = useGetSeriesDetailQuery(id);
+
+  /* root values */
+  const gmd_data = data;
+  const gmd_error = error;
+  const gmd_loading = isLoading;
+
+  // console.log({gmd_data})
+
+  /* extended values */
+
+  /* constants */
+  const title = gmd_data?.name;
+  const heroBackground = `${TMDB_IMG}${TMDB_IMG_RES.backdrop_sizes[1]}${gmd_data?.backdrop_path}`;
+  const poster = `${TMDB_IMG}${TMDB_IMG_RES.poster_sizes[4]}${gmd_data?.poster_path}`;
+
+  const releasedDate = gmd_data?.first_air_date;
+  const releasedYear =
+    releasedDate !== "" ? releasedDate?.substring(0, 4) : "Unknown";
+
+  const getRating = gmd_data?.content_ratings.results;
+  const genres = gmd_data?.genres;
+  const runtime = gmd_data?.episode_run_time && timeConvert(gmd_data?.episode_run_time);
+  const status = gmd_data?.status;
+  const tagline = gmd_data?.tagline;
+  const overview = gmd_data?.overview;
+  const rating = gmd_data?.vote_average;
+  const popularity = gmd_data?.popularity;
+  const imdbID = gmd_data?.imdb_id;
+
+  /**
+   * Get Content Rating
+   */
+  //#region
+  let contentRating, contentRating_US;
+  const findOtherRatings_series = () => {
+    let i = 1;
+    if (getRating === []) {
+      do {
+        contentRating = getRating[getRating.length - i].rating;
+        i++;
+      } while (contentRating === "");
+    } else {
+      contentRating = "";
+    }
+
+    if(getRating?.length > 0 && getRating[0]?.rating !== '') {
+      contentRating = getRating[0]?.rating;
+    }
+  };
+
+  if (gmd_data?.content_ratings.results.length > 0) {
+    contentRating_US = gmd_data?.content_ratings.results.filter((item) => {
+      return item.iso_3166_1 === "US";
+    });
+
+    if (contentRating_US.length === 0) {
+      findOtherRatings_series();
+    } else {
+      let i = 1;
+      do {
+        contentRating = contentRating_US[contentRating_US.length - i].rating;
+        i++;
+      } while (contentRating === "");
+    }
+  } else {
+    contentRating = "";
+  }
+  // getRating !== [] ? checkMovieRating() : (contentRating = "");
+  //#endregion
+
+  console.log({runtime})
+
+  return {
+    gmd_data,
+    gmd_error,
+    gmd_loading,
+
+    title,
+    heroBackground,
+    poster,
+    releasedYear,
+    contentRating,
+    genres,
+    runtime,
+    status,
+    tagline,
+    overview,
+    rating,
+    popularity,
+    imdbID,
+  };
+};
+
+export default IntGetSeriesDetail;

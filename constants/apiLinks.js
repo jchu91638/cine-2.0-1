@@ -8,3 +8,6 @@ export const DISCOVER_MOVIES_GENRES = `${BASE_URL}discover/`;
 
 // movie detail
 export const MOVIE_DETAIL = `${BASE_URL}movie/`;
+
+// series detail
+export const SERIES_DETAIL = `${BASE_URL}tv/`

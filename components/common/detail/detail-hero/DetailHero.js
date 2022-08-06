@@ -12,6 +12,7 @@ const DetailHero = ({
   data,
   error,
   loading,
+  isSeries,
 
   title,
   backgroundImage,
@@ -133,13 +134,15 @@ const DetailHero = ({
                     <Button className="btn-outline">View Trailer</Button>
                   </div>
 
-                  <div>
-                    <h1 className="text-gray text-cfs-3 lg:text-cfs-4 font-bold font-heading  mb-1">
-                      Download
-                    </h1>
+                  {!isSeries && (
+                    <div>
+                      <h1 className="text-gray text-cfs-3 lg:text-cfs-4 font-bold font-heading  mb-1">
+                        Download
+                      </h1>
 
-                    <DetailTorrent imdbID={imdbID} />
-                  </div>
+                      <DetailTorrent imdbID={imdbID} />
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
