@@ -113,6 +113,10 @@ button {
   transition: background-position 0.3s ease-in-out;
 }
 
+.MuiCircularProgress-circle {
+  stroke: #21e6c1 !important;
+}
+
 .backdrop-grayscale {
   -webkit-backdrop-filter: grayscale(1);
   backdrop-filter: grayscale(1);

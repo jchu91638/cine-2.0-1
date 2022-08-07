@@ -5,7 +5,7 @@ import Link from "next/link";
 import { AccessTimeSharp, StarRateRounded, People } from "@mui/icons-material";
 
 /* Components */
-import { Button } from "@mui/material";
+import { Button, CircularProgress } from "@mui/material";
 import DetailTorrent from "../detail-torrent/DetailTorrent";
 
 const DetailHero = ({
@@ -152,6 +152,13 @@ const DetailHero = ({
           </div>
         </section>
       )}
+      {
+        loading && (
+          <div className="h-[80vh] flex justify-center items-center">
+            <CircularProgress/>
+          </div>
+        )
+      }
     </>
   );
 };
