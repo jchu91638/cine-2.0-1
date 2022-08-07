@@ -112,3 +112,8 @@ button {
   background-size: 300%;
   transition: background-position 0.3s ease-in-out;
 }
+
+.backdrop-grayscale {
+  -webkit-backdrop-filter: grayscale(1);
+  backdrop-filter: grayscale(1);
+}

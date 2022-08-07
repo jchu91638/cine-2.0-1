@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/dist/query";
 import navActiveReducer from "./reducer.nav";
+import popUpReducer from './reducer.popUp';
 
 /*  */
 import {
@@ -14,6 +15,7 @@ export const store = configureStore({
     [api_trendingAllDay.reducerPath]: api_trendingAllDay.reducer,
     [api_discoverMoviesGenres.reducerPath]: api_discoverMoviesGenres.reducer,
     navActivate: navActiveReducer,
+    popUp : popUpReducer,
     [api_movieDetail.reducerPath]: api_movieDetail.reducer,
     [api_seriesDetail.reducerPath] : api_seriesDetail.reducer,
   },

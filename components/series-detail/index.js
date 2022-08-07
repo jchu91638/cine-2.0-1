@@ -1,60 +1,72 @@
-import React from 'react';
+import React from "react";
 
 /* Components */
-import { DetailHero } from '../common';
+import { DetailHero, YTPopUp } from "../common";
 
-import Hook from './hook.seriesDetail';
+import Hook from "./hook.seriesDetail";
 
-const SeriesDetail = ({
-    seriesId
-}) => {
+const SeriesDetail = ({ seriesId }) => {
+  const {
+    //#region - getSeriesDetail
+    gsd_data,
+    gsd_error,
+    gsd_loading,
 
-    const {
-        //#region - getSeriesDetail
-        gmd_data,
-        gmd_error,
-        gmd_loading,
+    title,
+    heroBackground,
+    poster,
+    releasedYear,
+    contentRating,
+    genres,
+    runtime,
+    status,
+    tagline,
+    overview,
+    rating,
+    popularity,
+    imdbID,
+    trailer,
+    isYTPopUp,
 
-        title,
-        heroBackground,
-        poster,
-        releasedYear,
-        contentRating,
-        genres,
-        runtime,
-        status,
-        tagline,
-        overview,
-        rating,
-        popularity,
-        imdbID
-        //#endregion
-    } = Hook(seriesId)
+    /* actions */
+    open_YTPopUp,
+    close_YTPopUp,
+    //#endregion
+  } = Hook(seriesId);
 
-    return (
-        <>
-            <DetailHero
-                data = {gmd_data}
-                error = {gmd_error}
-                loading = {gmd_loading}
-                isSeries = {true}
+  return (
+    <>
+      <DetailHero
+        data={gsd_data}
+        error={gsd_error}
+        loading={gsd_loading}
+        isSeries={true}
+        title={title}
+        backgroundImage={heroBackground}
+        poster={poster}
+        releasedYear={releasedYear}
+        contentRating={contentRating}
+        genres={genres}
+        runtime={runtime}
+        status={status}
+        tagline={tagline}
+        overview={overview}
+        rating={rating}
+        popularity={popularity}
+        imdbID={imdbID}
+        isYTPopUp = {isYTPopUp}
 
-                title = {title}
-                backgroundImage = {heroBackground}
-                poster = {poster}
-                releasedYear = {releasedYear}
-                contentRating = {contentRating}
-                genres = {genres}
-                runtime = {runtime}
-                status = {status}
-                tagline = {tagline}
-                overview = {overview}
-                rating = {rating}
-                popularity = {popularity}
-                imdbID = {imdbID}
-            />
-        </>
-    );
-}
+        /* actions */
+        open_YTPopUp ={open_YTPopUp}
+      />
+
+      <YTPopUp
+        trailer={trailer}
+        isYTPopUp={isYTPopUp}
+        close_YTPopUp={close_YTPopUp}
+      />
+    </>
+  );
+};
 
 export default SeriesDetail;

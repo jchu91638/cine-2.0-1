@@ -12,7 +12,7 @@ const SeriesDetail = ({ id, series }) => {
 
     const media_type = 'series';
 
-    const title = series.original_title;
+    const title = series.name;
     const backdrop_path = `https://www.themoviedb.org/t/p/original${series.backdrop_path}`;
     const overview = series.overview;
 

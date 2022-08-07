@@ -27,6 +27,9 @@ const DetailHero = ({
   rating,
   popularity,
   imdbID,
+
+  /* actions */
+  open_YTPopUp
 }) => {
   return (
     <>
@@ -131,7 +134,7 @@ const DetailHero = ({
                       </div>
                     </div>
 
-                    <Button className="btn-outline">View Trailer</Button>
+                    <Button onClick={() => open_YTPopUp()} className="btn-outline">View Trailer</Button>
                   </div>
 
                   {!isSeries && (

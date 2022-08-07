@@ -11,13 +11,15 @@ const TorrentItem = ({ item }) => {
   return (
     <>
       <div className="flex flex-col">
-        <button
-          data-place={item.size}
-          className="torrent-btn cursor-pointer py-1 px-4 font-primary text-cfs-1 rounded-md text-wah"
-        >
-          <span className="font-bold">{item.quality}</span>.
-          <span className="capitalize">{item.type}</span>
-        </button>
+        <a href={item.url}>
+          <button
+            data-place={item.size}
+            className="torrent-btn cursor-pointer py-1 px-4 font-primary text-cfs-1 rounded-md text-wah"
+          >
+            <span className="font-bold">{item.quality}</span>.
+            <span className="capitalize">{item.type}</span>
+          </button>
+        </a>
         <span className="text-[12px] mt-1 ml-4">{item.size}</span>
       </div>
     </>

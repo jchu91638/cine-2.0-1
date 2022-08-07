@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* Components */
-import { DetailHero } from '../common';
+import { DetailHero , YTPopUp } from '../common';
 
 import Hook from './hook.movieDetail';
 
@@ -27,7 +27,13 @@ const MovieDetail = ({
         overview,
         rating,
         popularity,
-        imdbID
+        imdbID,
+        trailer,
+        isYTPopUp,
+
+        /* actions */
+        open_YTPopUp,
+        close_YTPopUp
         //#endregion
     } = Hook(movieId)
 
@@ -51,6 +57,15 @@ const MovieDetail = ({
                 rating = {rating}
                 popularity = {popularity}
                 imdbID = {imdbID}
+                isYTPopUp = {isYTPopUp}
+
+                /* actions */
+                open_YTPopUp ={open_YTPopUp}
+            />
+            <YTPopUp
+                trailer={trailer}
+                isYTPopUp = {isYTPopUp}
+                close_YTPopUp = {close_YTPopUp}
             />
         </>
     );

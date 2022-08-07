@@ -12,10 +12,8 @@ const IntGetMovieDetail = (id) => {
   const gmd_error = error;
   const gmd_loading = isLoading;
 
-  // console.log({gmd_data})
-
   /* extended values */
-
+  //#region 
   /* constants */
   const title = gmd_data?.original_title;
   const heroBackground = `${TMDB_IMG}${TMDB_IMG_RES.backdrop_sizes[1]}${gmd_data?.backdrop_path}`;
@@ -34,6 +32,12 @@ const IntGetMovieDetail = (id) => {
   const rating = gmd_data?.vote_average;
   const popularity = gmd_data?.popularity;
   const imdbID = gmd_data?.imdb_id;
+
+  //#endregion
+
+  /*  ----------------------------------------------------
+   *  Computed Values
+   ---------------------------------------------------- */ 
 
   /**
    * Get Content Rating
@@ -87,7 +91,38 @@ const IntGetMovieDetail = (id) => {
   getRating !== [] ? checkMovieRating() : (contentRating = "");
   //#endregion
 
+  /**
+   * Get Trailer Official 
+   */
+  //#region 
+   let trailer_official, trailer;
+   if (gmd_data?.videos?.results.length > 0) {
+       trailer_official = data.videos.results.filter(item => {
+           return (item.type === 'Trailer' && item.official === true)
+       });
 
+       if (trailer_official.length === 0) {
+           trailer_official = data.videos.results.filter(item => {
+               if (item.type === 'Trailer') {
+                   return (item.type === 'Trailer')
+               }
+               else {
+                   return (item);
+               }
+
+           });
+       }
+
+       if (trailer_official[0]) {
+           trailer = trailer_official[0].key;
+       } else {
+           trailer = null;
+       }
+
+   } else {
+       trailer = null;
+   }
+   //#endregion
 
   return {
     gmd_data,
@@ -106,7 +141,8 @@ const IntGetMovieDetail = (id) => {
     overview,
     rating,
     popularity,
-    imdbID
+    imdbID,
+    trailer
   };
 };
 
