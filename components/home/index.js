@@ -3,6 +3,7 @@ import Link from "next/link";
 
 /* Components */
 import Hero from "./components/hero";
+import SearchInput from "./components/search-input/SearchInput";
 
 /* Hook */
 import Hook from "./hook.home";
@@ -28,6 +29,8 @@ const HomePage = () => {
         slideItemData =  {homeHeroSlideItemData}
         //#endregion
       />
+
+      <SearchInput/>
     </>
   );
 };

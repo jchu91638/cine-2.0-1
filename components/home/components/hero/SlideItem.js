@@ -31,7 +31,7 @@ const SlideItem = ({
           backgroundImage: `url(https://www.themoviedb.org/t/p/original/${backdrop_path})`,
         }}
       >
-        <div className="slide--hero-wrapper px-6 lg:px-16 flex items-center justify-start absolute w-full left-0 text-wah">
+        <div className="slide--hero-wrapper px-6 lg:px-16 flex items-center justify-center absolute w-full left-0 text-wah">
           <div className="max-w-[90rem] space-y-4">
             <p className="font-writing text-cfs-4">
               Top{" "}

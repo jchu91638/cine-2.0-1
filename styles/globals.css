@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer components {
+
+    .container_x_md {
+        @apply max-w-[90rem] mx-auto px-[1.25rem] md:px-[3.75rem];
+    }
+
     .btn-primary {
         @apply bg-danger capitalize font-primary font-bold text-cfs-1 hover:bg-danger hover:bg-opacity-80;
     }

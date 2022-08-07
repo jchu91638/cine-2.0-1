@@ -117,6 +117,21 @@ button {
   stroke: #21e6c1 !important;
 }
 
+.MuiInputLabel-root {
+  color: rgba(33, 230, 193, 0.8) !important;
+  font-family: Catamaran, sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.1px !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: #278ea5 !important;
+}
+
+.MuiInputBase-input {
+  color: #fff !important;
+}
+
 .backdrop-grayscale {
   -webkit-backdrop-filter: grayscale(1);
   backdrop-filter: grayscale(1);
