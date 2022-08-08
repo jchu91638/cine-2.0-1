@@ -39,16 +39,16 @@ const PopularNow = ({
                     <ToggleButton className="toggle-btn" value="series">Series</ToggleButton>
                 </ToggleButtonGroup>
 
-                <div className=''>
+                <div className='mt-2'>
                     <div className='popular-now-wrapper min-h-[25rem] relative '>
-                        <div className={tab === 'movies' ? 'slide_is_showed' : 'slide_is_hidden'}>
+                        <div className={`${tab === 'movies' ? 'slide_is_showed' : 'slide_is_hidden'} w-full h-full`}>
                             <PopularMovies
                                 data = {moviesData}
                                 loading = {moviesLoading}
                                 error = {moviesError}
                             />
                         </div>
-                        <div className={tab === 'series' ? 'slide_is_showed' : 'slide_is_hidden'}>
+                        <div className={`${tab === 'series' ? 'slide_is_showed' : 'slide_is_hidden'} w-full h-full`}>
                             <PopularSeries
                                 data = {seriesData}
                                 loading = {seriesLoading}
