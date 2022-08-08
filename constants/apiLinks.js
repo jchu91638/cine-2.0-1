@@ -11,3 +11,7 @@ export const MOVIE_DETAIL = `${BASE_URL}movie/`;
 
 // series detail
 export const SERIES_DETAIL = `${BASE_URL}tv/`
+
+/* Home - PopularNow */
+export const TRENDING_MOVIES = `${BASE_URL}trending/movie/day?api_key=${API_KEY}`;
+export const TRENDING_SERIES = `${BASE_URL}trending/tv/day?api_key=${API_KEY}`;

@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { API_KEY } from "../constants/common";
-import { TRENDING_ALL_DAY, DISCOVER_MOVIES_GENRES } from "../constants/apiLinks";
+import { TRENDING_ALL_DAY, DISCOVER_MOVIES_GENRES , TRENDING_MOVIES, TRENDING_SERIES } from "../constants/apiLinks";
 
 export const api_trendingAllDay = createApi({
   reducerPath: "trendingAllDay",
@@ -20,7 +20,29 @@ export const api_discoverMoviesGenres  = createApi({
       query: (genreId) => `movie?api_key=${API_KEY}&with_genres=${genreId}`
     })
   })
-})
+});
+
+export const api_trendingMoviesDay = createApi({
+  reducerPath : "trendingMoviesDay",
+  baseQuery : fetchBaseQuery({ baseUrl : TRENDING_MOVIES}),
+  endpoints : (builder) => ({
+    getTrendingMoviesDay : builder.query({
+      query : () => ``,
+    }),
+  }),
+});
+
+export const api_trendingSeriesDay = createApi({
+  reducerPath : "trendingSeriesDay",
+  baseQuery : fetchBaseQuery({ baseUrl : TRENDING_SERIES}),
+  endpoints : (builder) => ({
+    getTrendingSeriesDay : builder.query({
+      query : () => ``,
+    }),
+  }),
+});
 
 export const { useGetTrendingAllDayQuery } = api_trendingAllDay;
 export const { useGetDiscoverMoviesGenresQuery } = api_discoverMoviesGenres;
+export const { useGetTrendingMoviesDayQuery }  = api_trendingMoviesDay;
+export const { useGetTrendingSeriesDayQuery } = api_trendingSeriesDay;

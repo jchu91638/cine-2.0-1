@@ -4,6 +4,7 @@ import Link from "next/link";
 /* Components */
 import Hero from "./components/hero";
 import SearchInput from "./components/search-input/SearchInput";
+import PopularNow from "./components/popular-now/PopularNow";
 
 /* Hook */
 import Hook from "./hook.home";
@@ -17,6 +18,14 @@ const HomePage = () => {
 
     homeHeroSlideItemData,
     //#endregion
+
+    gtm_data,
+    gtm_error,
+    gtm_loading,
+
+    gts_data,
+    gts_loading,
+    gts_error
   } = Hook();
 
   return (
@@ -31,6 +40,16 @@ const HomePage = () => {
       />
 
       <SearchInput/>
+
+      <PopularNow
+        moviesData = {gtm_data}
+        moviesLoading = {gtm_loading}
+        moviesError = {gtm_error}
+
+        seriesData = {gts_data}
+        seriesLoading = {gts_loading}
+        seriesError = {gts_error}
+      />
     </>
   );
 };

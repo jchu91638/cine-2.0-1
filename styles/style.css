@@ -2,6 +2,7 @@
 body {
   margin: 0 !important;
   line-height: 1;
+  overflow-x: hidden !important;
 }
 
 * {
@@ -113,6 +114,8 @@ button {
   transition: background-position 0.3s ease-in-out;
 }
 
+/* Override MUI */
+
 .MuiCircularProgress-circle {
   stroke: #21e6c1 !important;
 }
@@ -132,7 +135,48 @@ button {
   color: #fff !important;
 }
 
+.MuiToggleButton-root.Mui-selected {
+  background-color: #278ea5 !important;
+}
+
+.toggle-btn {
+  color: white !important;
+  text-transform: capitalize !important;
+  padding: 2.5px 10px !important;
+  border-color: #1f4287 !important;
+}
+
+/* Background util */
+
+.bg-popular {
+  background-repeat: no-repeat;
+  background-position: center 10px;
+  background-size: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .bg-popular {
+    background-position: center center;
+  }
+}
+
 .backdrop-grayscale {
   -webkit-backdrop-filter: grayscale(1);
   backdrop-filter: grayscale(1);
+}
+
+.popular-now-shadow {
+  box-shadow: #21e6c120 0px 8px 24px;
+}
+
+.popular-now-wrapper > * {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 200ms ease-in;
+}
+
+.swiper {
+  overflow: visible !important;
 }

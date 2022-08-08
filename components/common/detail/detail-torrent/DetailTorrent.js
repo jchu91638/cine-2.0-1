@@ -32,7 +32,7 @@ const DetailTorrent = ({ imdbID }) => {
   if (!data) return <p>Fetching torrents 😉</p>;
   if (error || torrentList.length === 0) return <p>No torrents found 😑</p>;
 
-  console.log({torrentList})
+  // console.log({torrentList})
   return (
     <>
       <div className="flex flex-wrap gap-2">

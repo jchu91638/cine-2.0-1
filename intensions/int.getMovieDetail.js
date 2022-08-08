@@ -63,7 +63,7 @@ const IntGetMovieDetail = (id) => {
       return item.iso_3166_1 === "US";
     });
 
-    console.log({contentRating_US})
+    // console.log({contentRating_US})
 
     contentRating_US?.map((item) => rating_arr.push(item.certification));
 
