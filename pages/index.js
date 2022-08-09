@@ -56,7 +56,7 @@ export default function Home() {
         <meta property="twitter:image" content="/meta.png" />
       </Head>
 
-      <main className="font-primary">
+      <main className="font-primary overflow-hidden">
         <HomePage />
       </main>
     </>
