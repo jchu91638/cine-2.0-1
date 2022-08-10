@@ -6,6 +6,7 @@ import {
   getTrendingAllDay,
   getTrendingMoviesDay,
   getTrendingSeriesDay,
+  getTheatreMovies
 } from "../../intensions";
 
 /* Actions */
@@ -41,6 +42,12 @@ const Hook = () => {
     gts_error
   } = getTrendingSeriesDay();
 
+  const {
+    tm_data,
+    tm_loading,
+    tm_error,
+  } = getTheatreMovies();
+
   return {
     //#region - getTrendingAllDay
     gta_data,
@@ -50,13 +57,23 @@ const Hook = () => {
     homeHeroSlideItemData,
     //#endregion
 
+    //#region - getTrendingMoves in a day
     gtm_data,
     gtm_error,
     gtm_loading,
+    //#endregion
 
+    //#region - getTrendingSeries in a day
     gts_data,
     gts_loading,
-    gts_error
+    gts_error,
+    //#endregion
+
+    //#region - getTheatreMovies
+    tm_data,
+    tm_loading,
+    tm_error
+    //#endregion
   };
 };
 

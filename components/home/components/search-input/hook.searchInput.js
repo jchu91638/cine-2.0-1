@@ -7,7 +7,7 @@ const Hook = () => {
     const enterHandler = (e) => {
         e.preventDefault();
 
-        console.log({formValue})
+        // console.log({formValue})
     }
 
     const changeHandler = (e) => {

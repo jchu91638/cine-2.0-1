@@ -15,3 +15,6 @@ export const SERIES_DETAIL = `${BASE_URL}tv/`
 /* Home - PopularNow */
 export const TRENDING_MOVIES = `${BASE_URL}trending/movie/day?api_key=${API_KEY}`;
 export const TRENDING_SERIES = `${BASE_URL}trending/tv/day?api_key=${API_KEY}`;
+
+/* Home - TheatreMovies */
+export const THEATRE_MOVIES = `${BASE_URL}movie/now_playing?api_key=${API_KEY}&language=en-US`;

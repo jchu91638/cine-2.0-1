@@ -8,6 +8,10 @@
         @apply font-heading font-bold lg:text-[1.75rem] text-[1.375rem]
     }
 
+    .title-3 {
+        @apply font-extrabold text-[22px] md:text-[38px]
+    }
+
     .container_x_md {
         @apply max-w-[90rem] mx-auto px-[1.25rem] md:px-[3.75rem];
     }

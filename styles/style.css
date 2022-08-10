@@ -165,6 +165,20 @@ button {
   backdrop-filter: grayscale(1);
 }
 
+.backdrop-trailer-grayscale {
+  -webkit-backdrop-filter: grayscale(1);
+  backdrop-filter: grayscale(1);
+}
+
+.group-trailer:hover .backdrop-trailer-grayscale {
+  -webkit-backdrop-filter: grayscale(0);
+  backdrop-filter: grayscale(0);
+}
+
+.trailer-bg {
+  background-image: linear-gradient(to bottom, #1c2a30 0%, transparent 100%);
+}
+
 .popular-now-shadow {
   box-shadow: #21e6c120 0px 8px 24px;
 }
@@ -177,6 +191,31 @@ button {
   transition: all 200ms ease-in;
 }
 
+.bottom-overlay {
+  background-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 65%,
+    #1c2a3070 77%,
+    #1c2a30 85%,
+    #1c2a30 100%
+  );
+}
+
+.poster-shadow {
+  box-shadow: #21e6c124 0px 3px 8px;
+}
+
+.special-text-shadow {
+  text-shadow: 1px 1px 3px #21e6c1;
+}
+
 .swiper {
   overflow: visible !important;
+}
+
+@media (max-width: 35.9375em) {
+  .swiper-pagination-bullet {
+    width: 20px !important;
+  }
 }
