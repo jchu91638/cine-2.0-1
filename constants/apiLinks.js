@@ -18,3 +18,6 @@ export const TRENDING_SERIES = `${BASE_URL}trending/tv/day?api_key=${API_KEY}`;
 
 /* Home - TheatreMovies */
 export const THEATRE_MOVIES = `${BASE_URL}movie/now_playing?api_key=${API_KEY}&language=en-US`;
+
+/* Home - UpcomingMovies */
+export const UPCOMING_MOVIES = `${BASE_URL}movie/upcoming?api_key=${API_KEY}&language=en-US`;

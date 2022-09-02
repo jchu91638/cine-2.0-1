@@ -60,7 +60,7 @@ const SlideItem = ({ id, title, backdrop_path, media_type, overview }) => {
         <div className="w-full ml-5 pb-0 md:pb-8 flex justify-between">
           <div>
             <Link href={`/movies/${id}`}>
-              <h1 className="font-special font-extrabold text-white special-text-shadow title-3">
+              <h1 className="font-special cursor-pointer font-extrabold text-white special-text-shadow title-3">
                 {title}
               </h1>
             </Link>

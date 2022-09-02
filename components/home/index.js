@@ -5,6 +5,7 @@ import Hero from "./components/hero";
 import SearchInput from "./components/search-input/SearchInput";
 import PopularNow from "./components/popular-now/PopularNow";
 import TheatreMovies from "./components/theatre-movies/TheatreMovies";
+import UpComingMovies from "./components/upcoming-movies/UpcomingMovies";
 
 /* Hook */
 import Hook from "./hook.home";
@@ -36,6 +37,12 @@ const HomePage = () => {
     tm_loading,
     tm_error,
     //#endregion
+
+    //#region - getUpcomingMovies
+    gum_data,
+    gum_loading,
+    gum_error,
+    //#endregion
   } = Hook();
 
   return (
@@ -60,11 +67,9 @@ const HomePage = () => {
         seriesError={gts_error}
       />
 
-      <TheatreMovies 
-        data = {tm_data}
-        loading = {tm_loading}
-        error = {tm_error}
-      />
+      <TheatreMovies data={tm_data} loading={tm_loading} error={tm_error} />
+
+      <UpComingMovies data={gum_data} loading={gum_loading} error={gum_error} />
     </>
   );
 };
