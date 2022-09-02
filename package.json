@@ -17,6 +17,7 @@
     "@reduxjs/toolkit": "^1.8.2",
     "@tailwindcss/line-clamp": "^0.4.0",
     "@tanem/react-nprogress": "^5.0.8",
+    "axios": "^0.27.2",
     "color-thief-react": "^2.1.0",
     "colorthief": "^2.3.2",
     "fast-average-color": "^9.1.1",

@@ -260,6 +260,11 @@ button {
   bottom: -7px;
 }
 
+.search-header {
+  background: linear-gradient(90deg, #1f4287 0%, #278ea5 100%);
+  box-shadow: #21e6c110 0px 4px 12px;
+}
+
 .swiper {
   overflow: visible !important;
 }

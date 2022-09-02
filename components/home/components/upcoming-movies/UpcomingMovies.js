@@ -38,7 +38,7 @@ const UpcomingMovies = ({ data, loading, error }) => {
           <h1 className="title-2 mb-5 text-white">Upcoming Movies</h1>
 
           <Link href="/upcoming/1">
-            <div className="">
+            <div className="cursor-pointer">
               <p className="text-white border-0 border-solid border-b border-light font-bold">
                 View All
               </p>
