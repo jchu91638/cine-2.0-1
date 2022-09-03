@@ -4,6 +4,7 @@ import React from "react";
 import Hook from "./hook.upcomingPaginate";
 
 /* Components */
+import { CircularProgress } from "@mui/material";
 import UpcomingItem from "../home/components/upcoming-movies/UpcomingItem";
 import Pagination from "../common/pagination";
 
@@ -35,11 +36,17 @@ const UpcomingAllPaginatePage = () => {
   return (
     <>
       <section className="container_x_md py-5">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
-          {itemList}
-        </div>
+        {gump_loading && (
+          <div className="h-[400px] w-full flex justify-center items-center">
+            <CircularProgress />
+          </div>
+        )}
+        {gump_data && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
+            {itemList}
+          </div>
+        )}
 
-        {console.log({ pageNo })}
         <Pagination
           page={pageNo}
           pageClick={pageClick}

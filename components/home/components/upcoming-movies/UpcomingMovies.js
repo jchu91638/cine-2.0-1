@@ -5,6 +5,7 @@ import Link from "next/link";
 import Hook from "./hook.upcomingMovies";
 
 /* Components */
+import { CircularProgress } from "@mui/material";
 import UpcomingItem from "./UpcomingItem";
 import { Button } from "@mui/material";
 
@@ -15,7 +16,7 @@ const UpcomingMovies = ({ data, loading, error }) => {
 
     /* actions */
     setMaxNum,
-    handelMaxNum
+    handelMaxNum,
   } = Hook(data);
 
   let displayedList = usedDataList?.map((item) => {
@@ -32,42 +33,58 @@ const UpcomingMovies = ({ data, loading, error }) => {
   });
 
   return (
-    <section className="bg-upcoming">
-      <div className="container_x_md py-12">
-        <div className="flex flex-col md:flex-row gap-4 mb-8 md:justify-between items-center">
-          <h1 className="title-2 mb-5 text-white">Upcoming Movies</h1>
+    <>
+      <section className="bg-upcoming">
+        <div className="container_x_md py-12">
+          <div className="flex flex-col md:flex-row gap-4 mb-8 md:justify-between items-center">
+            <h1 className="title-2 mb-5 text-white">Upcoming Movies</h1>
 
-          <Link href="/upcoming/1">
-            <div className="cursor-pointer">
-              <p className="text-white border-0 border-solid border-b border-light font-bold">
-                View All
-              </p>
+            <Link href="/upcoming/1">
+              <div className="cursor-pointer">
+                <p className="text-white border-0 border-solid border-b border-light font-bold">
+                  View All
+                </p>
+              </div>
+            </Link>
+          </div>
+
+          {loading && (
+            <div className="h-[400px] w-full flex justify-center items-center">
+              <CircularProgress />
             </div>
-          </Link>
-        </div>
+          )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
-          {displayedList}
-        </div>
+          {data && (
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
+                {displayedList}
+              </div>
 
-        {!(maxNum >= 20) ? (
-          <Button
-            onClick={handelMaxNum}
-            className="border-primary text-primary capitalize table mx-auto"
-            variant="outlined"
-            size="small"
-          >
-            View More
-          </Button>
-        ) : (
-          <Link href="/upcoming">
-            <Button className="border-primary text-primary capitalize table mx-auto" variant="outlined" size="small">
-              View All
-            </Button>
-          </Link>
-        )}
-      </div>
-    </section>
+              {!(maxNum >= 20) ? (
+                <Button
+                  onClick={handelMaxNum}
+                  className="border-primary text-primary capitalize table mx-auto"
+                  variant="outlined"
+                  size="small"
+                >
+                  View More
+                </Button>
+              ) : (
+                <Link href="/upcoming">
+                  <Button
+                    className="border-primary text-primary capitalize table mx-auto"
+                    variant="outlined"
+                    size="small"
+                  >
+                    View All
+                  </Button>
+                </Link>
+              )}
+            </>
+          )}
+        </div>
+      </section>
+    </>
   );
 };
 
