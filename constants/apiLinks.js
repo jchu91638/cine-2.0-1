@@ -21,3 +21,6 @@ export const THEATRE_MOVIES = `${BASE_URL}movie/now_playing?api_key=${API_KEY}&l
 
 /* Home - UpcomingMovies */
 export const UPCOMING_MOVIES = `${BASE_URL}movie/upcoming?api_key=${API_KEY}&language=en-US`;
+
+/* Upcoming Page - Upcoming All with pagination */
+export const UPCOMING_MOVIES_PAGINATE = `${BASE_URL}movie/upcoming?api_key=${API_KEY}&language=en-US`;

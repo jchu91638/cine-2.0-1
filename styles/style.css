@@ -70,6 +70,7 @@ button {
   outline: none;
   border: none;
   box-shadow: none;
+  cursor: pointer;
 }
 
 /*
@@ -263,6 +264,33 @@ button {
 .search-header {
   background: linear-gradient(90deg, #1f4287 0%, #278ea5 100%);
   box-shadow: #21e6c110 0px 4px 12px;
+}
+
+.paginate-wrapper button {
+  background-color: #278ea5;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+
+  box-shadow: #21e6c120 0px 2px 8px 0px;
+  transition: all 100ms ease;
+}
+
+.paginate-wrapper button:hover {
+  background-color: #21e6c1;
+  color: #278ea5;
+}
+
+.paginate-wrapper button:disabled {
+  background-color: transparent;
+}
+
+.paginate-wrapper button > svg {
+  font-size: 1rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
 }
 
 .swiper {

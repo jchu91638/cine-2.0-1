@@ -2,14 +2,13 @@ import React from "react";
 
 /* Components */
 import { SearchHeader } from "../../components/common";
+import { UpcomingPaginatePage } from "../../components";
 
 const UpcomingPage = () => {
   return (
     <>
       <SearchHeader />
-      <div>
-        <h1>Here is Upcoming...</h1>
-      </div>
+      <UpcomingPaginatePage/>
     </>
   );
 };

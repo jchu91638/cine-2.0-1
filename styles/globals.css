@@ -31,4 +31,8 @@
     .slide_is_hidden {
         @apply invisible opacity-0 translate-y-[20px];
     }
+
+    .pagination-item {
+        @apply inline-flex w-[20px] h-[20px] justify-center items-center text-wah border border-primary rounded-full ml-3 text-sm font-extrabold cursor-pointer;
+    }
 }
