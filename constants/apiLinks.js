@@ -24,3 +24,6 @@ export const UPCOMING_MOVIES = `${BASE_URL}movie/upcoming?api_key=${API_KEY}&lan
 
 /* Upcoming Page - Upcoming All with pagination */
 export const UPCOMING_MOVIES_PAGINATE = `${BASE_URL}movie/upcoming?api_key=${API_KEY}&language=en-US`;
+
+/* Search Result Page - pagination */
+export const SEARCH_QUERY = `${BASE_URL}search/`;

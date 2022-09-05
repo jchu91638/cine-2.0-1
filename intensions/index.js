@@ -7,3 +7,4 @@ export { default as getTheatreMovies } from './int.getTheatreMovies';
 export { default as getUpcomingMovies } from './int.getUpcomingMovies';
 
 export { default as getUpcomingMoviesPaginate } from './int.getUpcomingMoviesPaginate';
+export { default as getSearchQueryResult } from './int.getSearchResults';

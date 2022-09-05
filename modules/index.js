@@ -14,6 +14,7 @@ import {
 } from "../services/services.home";
 import { api_movieDetail, api_seriesDetail } from "../services/services.detail";
 import { api_upcomingMoviesPaginate } from "../services/services.upcoming";
+import { api_searchQueryResult } from "../services/services.search";
 
 export const store = configureStore({
   reducer: {
@@ -27,7 +28,8 @@ export const store = configureStore({
     [api_trendingSeriesDay.reducerPath] : api_trendingSeriesDay.reducer,
     [api_theatreMovies.reducerPath] : api_theatreMovies.reducer,
     [api_upcomingMovies.reducerPath] : api_upcomingMovies.reducer,
-    [api_upcomingMoviesPaginate.reducerPath] : api_upcomingMoviesPaginate.reducer
+    [api_upcomingMoviesPaginate.reducerPath] : api_upcomingMoviesPaginate.reducer,
+    [api_searchQueryResult.reducerPath] : api_searchQueryResult.reducer
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware()
@@ -40,6 +42,7 @@ export const store = configureStore({
       .concat(api_theatreMovies.middleware)
       .concat(api_upcomingMovies.middleware)
       .concat(api_upcomingMoviesPaginate.middleware)
+      .concat(api_searchQueryResult.middleware)
 });
 
 setupListeners(store.dispatch);

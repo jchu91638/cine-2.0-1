@@ -57,7 +57,7 @@ const UpcomingPage = () => {
         />
         <meta property="twitter:image" content="/meta.png" />
       </Head>
-      <SearchHeader />
+      <SearchHeader query="" />
       <UpcomingPaginatePage />
     </>
   );

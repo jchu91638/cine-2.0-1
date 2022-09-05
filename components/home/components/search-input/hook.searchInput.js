@@ -1,13 +1,14 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 const Hook = () => {
+    const router = useRouter();
 
     const [ formValue , setFormValue ] = useState('');
 
     const enterHandler = (e) => {
         e.preventDefault();
-
-        // console.log({formValue})
+        router.push(`/search/${formValue}/1`);
     }
 
     const changeHandler = (e) => {

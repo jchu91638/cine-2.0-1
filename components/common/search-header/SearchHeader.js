@@ -6,18 +6,22 @@ import { TextField } from "@mui/material";
 /* Hook */
 import Hook from "./hook.searchHeader";
 
-const SearchHeader = () => {
+const SearchHeader = ({
+  query
+}) => {
   const {
     formValue,
     displaySuggest,
     suggestData,
+    holderValue,
 
     /* actions */
     setFormVal,
     handleEnterInput,
     handleOnChangeInput,
     handleSuggestion,
-  } = Hook();
+    setHolderValue
+  } = Hook(query);
 
   return (
     <section className="search-header">
@@ -30,8 +34,10 @@ const SearchHeader = () => {
               id="fullWidth"
               autoComplete="off"
               variant="filled"
+              value={holderValue ? holderValue : ''}
               size="small"
               onChange={(e) => {
+                setHolderValue(e.target.value)
                 setTimeout(() => {
                   handleOnChangeInput(e);
                 }, 1500);
