@@ -1,16 +1,22 @@
-import React from 'react';
+import React from "react";
+import Link from "next/link";
 
-import { getSearchQueryResult } from '../../../../intensions'
+/* Action */
+import { getSearchQueryResult } from "../../../../intensions";
 
 const Hook = (query, pageNo) => {
-    console.log({hookQuery : query})
-    const {data, error, isLoading } = getSearchQueryResult({type: 'movie',query, pageNo});
+  const { data, error, isLoading } = getSearchQueryResult({
+    type: "movie",
+    query,
+    pageNo,
+  });
 
-    return {
-        data, 
-        error,
-        isLoading
-    }
-}
+
+  return {
+    data,
+    error,
+    isLoading
+  };
+};
 
 export default Hook;

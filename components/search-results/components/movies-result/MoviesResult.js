@@ -1,27 +1,36 @@
-import React from 'react';
+import React from "react";
 
 /* Hook */
-import Hook from './hook.moviesResult';
+import Hook from "./hook.moviesResult";
 
-const MoviesResult = ({
-    query,
-    page
-}) => {
-    console.log({query})
+/* Components */
+import SearchResultCard from "../../../common/cards/SearchResultCard";
 
-    const {
-        data,
-        error,
-        isLoading
-    } = Hook(query, page)
+const MoviesResult = ({ query, page }) => {
+  const { data, error, isLoading } = Hook(query, page);
 
-
-    console.log({data})
+  const movieResultList = data?.results?.map((movie, index) => {
     return (
-        <div>
-            
-        </div>
+      <div key={index}>
+        <SearchResultCard
+          id={movie.id}
+          title={movie.title}
+          image={movie.poster_path}
+          name={movie.name}
+        />
+      </div>
     );
-}
+  });
+
+  return (
+    <section className="flex-[7]">
+      <div className="container_x_md py-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-8">
+          {movieResultList}
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default MoviesResult;

@@ -15,8 +15,6 @@ const SearchResults = () => {
         searchQuery,
         pageNo
     } = Hook();
-
-    console.log({searchQuery})
     
     return (
         <>

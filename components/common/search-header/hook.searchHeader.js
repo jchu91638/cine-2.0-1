@@ -45,8 +45,12 @@ const Hook = (query) => {
 
   const handleEnterInput = (e) => {
     e.preventDefault();
-    router.push(`/search/${formValue}/1`);
-    setDisplaySuggest(false);
+    let trimedVal = holderValue.trim();
+
+    if (trimedVal.length !== 0) {
+      router.push(`/search/${trimedVal}/1`);
+      setDisplaySuggest(false);
+    }
   };
 
   const handleOnChangeInput = (e) => {
