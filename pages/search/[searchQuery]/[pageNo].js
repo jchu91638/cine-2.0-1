@@ -6,7 +6,7 @@ import { SearchResultPaginatePage } from "../../../components";
 const SearchResultPage = () => {
 
   return (
-    <main>
+    <main className="overflow-hidden">
       <SearchResultPaginatePage />
     </main>
   );

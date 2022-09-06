@@ -25,7 +25,7 @@ const SearchResults = () => {
                     <MoviesResult active = {active} query={searchQuery} page={pageNo}/>
                     <SeriesResult active = {active} query={searchQuery} page={pageNo}/>
                 </div>
-                <SearchAside/>
+                <SearchAside query = {searchQuery}/>
             </section>
         </>
     );
