@@ -8,7 +8,11 @@ const Hook = () => {
 
     const enterHandler = (e) => {
         e.preventDefault();
-        router.push(`/search/${formValue}/1`);
+        let trimedValue = formValue.trim();
+
+        if(trimedValue.length !== 0) {
+            router.push(`/search/${trimedValue}/1`);
+        }
     }
 
     const changeHandler = (e) => {

@@ -13,16 +13,17 @@ const SearchResults = () => {
 
     const {
         searchQuery,
-        pageNo
+        pageNo,
+        active
     } = Hook();
     
     return (
         <>
             <SearchHeader query={searchQuery}/>
-            <section>
-                <div>
-                    <MoviesResult query={searchQuery} page={pageNo}/>
-                    <SeriesResult query={searchQuery} page={pageNo}/>
+            <section className='flex p-0 flex-col-reverse lg:flex-row-reverse lg:px-12'>
+                <div className='flex-[7]'>
+                    <MoviesResult active = {active} query={searchQuery} page={pageNo}/>
+                    <SeriesResult active = {active} query={searchQuery} page={pageNo}/>
                 </div>
                 <SearchAside/>
             </section>

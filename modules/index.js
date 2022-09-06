@@ -2,6 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/dist/query";
 import navActiveReducer from "./reducer.nav";
 import popUpReducer from './reducer.popUp';
+import searchCategoryReducer from "./reducer.searchCategory";
 
 /*  */
 import {
@@ -22,6 +23,7 @@ export const store = configureStore({
     [api_discoverMoviesGenres.reducerPath]: api_discoverMoviesGenres.reducer,
     navActivate: navActiveReducer,
     popUp : popUpReducer,
+    searchCategory : searchCategoryReducer,
     [api_movieDetail.reducerPath]: api_movieDetail.reducer,
     [api_seriesDetail.reducerPath] : api_seriesDetail.reducer,
     [api_trendingMoviesDay.reducerPath] : api_trendingMoviesDay.reducer,

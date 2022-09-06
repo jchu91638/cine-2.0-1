@@ -5,9 +5,22 @@ import Hook from "./hook.moviesResult";
 
 /* Components */
 import SearchResultCard from "../../../common/cards/SearchResultCard";
+import { Pagination } from "../../../common";
 
-const MoviesResult = ({ query, page }) => {
-  const { data, error, isLoading } = Hook(query, page);
+const MoviesResult = ({active , query, page }) => {
+  const {
+    data,
+    error,
+    isLoading,
+    currentPageNo,
+    total_pages,
+
+    /* actions */
+    setCurrentPageNo,
+    pageClick,
+    goToBackPage,
+    goToNextPage
+  } = Hook(query, page);
 
   const movieResultList = data?.results?.map((movie, index) => {
     return (
@@ -23,11 +36,21 @@ const MoviesResult = ({ query, page }) => {
   });
 
   return (
-    <section className="flex-[7]">
+    <section className={`flex-[7] transition-all ${active === 'movies' ? 'opacity-100 visible translate-x-0 delay-300' : 'opacity-0 invisible -translate-x-5 h-0'}`}>
       <div className="container_x_md py-5">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-8">
           {movieResultList}
         </div>
+
+        <Pagination
+          page={currentPageNo}
+          pageClick={pageClick}
+          goToBackPage={goToBackPage}
+          goToNextPage={goToNextPage}
+          totalPages={total_pages}
+          query={query}
+          type="search"
+        />
       </div>
     </section>
   );

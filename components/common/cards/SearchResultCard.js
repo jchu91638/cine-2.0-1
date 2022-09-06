@@ -4,15 +4,21 @@ import { useRouter } from "next/router";
 /* Icons */
 import { PhotoTwoTone } from "@mui/icons-material";
 
-const SearchResultCard = ({id, title, image, name }) => {
-    const router = useRouter();
+const SearchResultCard = ({ id, title, image, name, isSeries }) => {
+  const router = useRouter();
 
-
-    const handleDirectDetail = (id) => {
-        router.push(`/movies/${id}`);
-      };
+  const handleDirectDetail = (id) => {
+    if (isSeries) {
+      router.push(`/series/${id}`);
+    } else {
+      router.push(`/movies/${id}`);
+    }
+  };
   return (
-    <div onClick={() => handleDirectDetail(id)} className="w-[150px] m-auto cursor-pointer">
+    <div
+      onClick={() => handleDirectDetail(id)}
+      className="w-[150px] m-auto cursor-pointer"
+    >
       <div className="mb-[10px]">
         {image !== null ? (
           <img
@@ -29,7 +35,7 @@ const SearchResultCard = ({id, title, image, name }) => {
 
       <div>
         <h1 className="text-white whitespace-nowrap overflow-hidden overflow-ellipsis text-sm">
-            {title ? title : name}
+          {title ? title : name}
         </h1>
       </div>
     </div>

@@ -1,10 +1,59 @@
 import React from 'react';
 
-const SeriesResult = () => {
+/* Hook */
+import Hook from "./hook.seriesResult";
+
+/* Components */
+import SearchResultCard from "../../../common/cards/SearchResultCard";
+import { Pagination } from "../../../common";
+
+const SeriesResult = ({ active ,query, page}) => {
+
+    const {
+        data,
+        error,
+        isLoading,
+        currentPageNo,
+        total_pages,
+    
+        /* actions */
+        setCurrentPageNo,
+        pageClick,
+        goToBackPage,
+        goToNextPage
+    } = Hook(query, page);
+
+    const seriesResultList = data?.results?.map((series, index) => {
+        return (
+          <div key={index}>
+            <SearchResultCard
+              id={series.id}
+              title={series.title}
+              image={series.poster_path}
+              name={series.name}
+              isSeries = {true}
+            />
+          </div>
+        );
+      });
     return (
-        <div>
-            
+        <section className={`flex-[7] transition-all ${active === 'series' ? 'opacity-100 visible translate-x-0 delay-300' : 'opacity-0 invisible -translate-x-5 h-0'}`}>
+        <div className="container_x_md py-5">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-8">
+            {seriesResultList}
+          </div>
+  
+          <Pagination
+            page={currentPageNo}
+            pageClick={pageClick}
+            goToBackPage={goToBackPage}
+            goToNextPage={goToNextPage}
+            totalPages={total_pages}
+            query={query}
+            type="search"
+          />
         </div>
+      </section>
     );
 }
 
