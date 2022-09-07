@@ -1,7 +1,7 @@
 import React from "react";
 
 /* Components */
-import { DetailHero, YTPopUp } from "../common";
+import { DetailHero, YTPopUp, CastsCrews, DetailImages } from "../common";
 
 import Hook from "./hook.seriesDetail";
 
@@ -54,10 +54,9 @@ const SeriesDetail = ({ seriesId }) => {
         rating={rating}
         popularity={popularity}
         imdbID={imdbID}
-        isYTPopUp = {isYTPopUp}
-
+        isYTPopUp={isYTPopUp}
         /* actions */
-        open_YTPopUp ={open_YTPopUp}
+        open_YTPopUp={open_YTPopUp}
       />
 
       <YTPopUp
@@ -65,6 +64,14 @@ const SeriesDetail = ({ seriesId }) => {
         isYTPopUp={isYTPopUp}
         close_YTPopUp={close_YTPopUp}
       />
+
+      <CastsCrews media_type={"tv"} id={seriesId} />
+
+      <div className="flex flex-col lg:flex-row justify-between container_x_md my-24">
+        <div className="lg:w-[70%] w-[100%] mb-5 lg:mb-0">
+            <DetailImages media_type={"tv"} id={seriesId} />
+        </div>
+      </div>
     </>
   );
 };

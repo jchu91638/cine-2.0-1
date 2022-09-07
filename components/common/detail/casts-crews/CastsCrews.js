@@ -75,7 +75,7 @@ const CastsCrews = ({ media_type, id }) => {
         </div>
       </section>
 
-      <section className="mt-8">
+      <section className="mt-5">
         <div className="container_x_md py-4">
           <h1 className="title-2 text-wah mb-4">Top Crews</h1>
 
