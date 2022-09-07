@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* Components */
-import { DetailHero , YTPopUp } from '../common';
+import { DetailHero , YTPopUp, CastsCrews } from '../common';
 
 import Hook from './hook.movieDetail';
 
@@ -66,6 +66,11 @@ const MovieDetail = ({
                 trailer={trailer}
                 isYTPopUp = {isYTPopUp}
                 close_YTPopUp = {close_YTPopUp}
+            />
+
+            <CastsCrews
+                media_type={'movie'}
+                id={movieId}
             />
         </>
     );
