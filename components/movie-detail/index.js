@@ -1,7 +1,7 @@
 import React from "react";
 
 /* Components */
-import { DetailHero, YTPopUp, CastsCrews, DetailImages } from "../common";
+import { DetailHero, YTPopUp, CastsCrews, DetailImages, DetailVideos } from "../common";
 
 import Hook from "./hook.movieDetail";
 
@@ -68,6 +68,8 @@ const MovieDetail = ({ movieId }) => {
       <div className="flex flex-col lg:flex-row justify-between container_x_md my-24">
         <div className="lg:w-[70%] w-[100%] mb-5 lg:mb-0">
             <DetailImages media_type={"movie"} id={movieId} />
+
+            <DetailVideos media_type={"movie"} id={movieId}/>
         </div>
       </div>
     </>
