@@ -89,6 +89,13 @@ button {
   top: -3px;
 }
 
+@media screen and (max-width: 576px) {
+  .slide--hero-wrapper {
+    background: linear-gradient(180deg, #071e3d, rgba(7, 30, 61, 0.4) 130%);
+  }
+  
+}
+
 /* Swiper override */
 .swiper-pagination-bullet-active {
   background: #21e6c1 !important;
