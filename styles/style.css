@@ -223,6 +223,10 @@ button {
   background-image: linear-gradient(to bottom, #1c2a30 0%, transparent 100%);
 }
 
+.keyword-bg{
+  background:  linear-gradient(1turn, rgb(223, 223, 223), #ffffff);
+}
+
 .popular-now-shadow {
   box-shadow: #21e6c120 0px 8px 24px;
 }
