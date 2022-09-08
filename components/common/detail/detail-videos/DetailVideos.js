@@ -16,7 +16,7 @@ const DetailVideos = ({
         <section className='flex w-full overflow-y-auto rounded bg-black backdrop-opacity-50 gap-x-2'>
                 {
                     trailersList === null ?
-                        <div class="p-5">
+                        <div className="p-5">
                             <h1 className='text-base text-warning m-0'>No Items available.</h1>
                         </div> :
                         trailersList
