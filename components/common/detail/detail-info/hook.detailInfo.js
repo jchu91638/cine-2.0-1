@@ -73,6 +73,8 @@ const Hook = (media_type, id) => {
   }
 
   return {
+    data,
+    error,
     homepage,
     facebook,
     twitter,

@@ -29,6 +29,8 @@ const Hook = (media_type, id) => {
     }
 
     return {
+        data,
+        error,
         backdropsList,
         view_more
     }

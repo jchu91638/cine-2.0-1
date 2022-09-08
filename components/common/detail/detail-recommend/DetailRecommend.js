@@ -2,8 +2,11 @@ import React from "react";
 /* Hook */
 import Hook from "./hook.detailRecommend";
 
+/* Icons */
+import { CircularProgress } from "@mui/material";
+
 const DetailRecommend = ({ media_type, id }) => {
-  const { recommendList } = Hook(media_type, id);
+  const { data, error, recommendList } = Hook(media_type, id);
 
   return (
     <section className="">
@@ -13,13 +16,19 @@ const DetailRecommend = ({ media_type, id }) => {
           {media_type === "movie" ? " Movies" : " Shows"}
         </h1>
 
-        <div className="flex overflow-y-auto pb-4 gap-x-3">
-          {recommendList === null ? (
-            <p className="text-danger">No recommendations for now.</p>
-          ) : (
-            recommendList
-          )}
-        </div>
+        {!data ? (
+          <div className="h-[150px] flex justify-center items-center">
+            <CircularProgress />
+          </div>
+        ) : (
+          <div className="flex overflow-y-auto pb-4 gap-x-3">
+            {recommendList === null ? (
+              <p className="text-danger">No recommendations for now.</p>
+            ) : (
+              recommendList
+            )}
+          </div>
+        )}
       </div>
     </section>
   );

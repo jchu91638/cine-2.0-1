@@ -32,6 +32,8 @@ const Hook = (media_type, id) => {
     }
 
     return {
+        data,
+        error,
         trailersList,
         view_more
     }

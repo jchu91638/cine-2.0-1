@@ -45,6 +45,8 @@ const Hook = (media_type, id) => {
     }
 
     return {
+        data,
+        error,
         castsToShow,
         crewsToShow
     }

@@ -59,6 +59,8 @@ const Hook = (media_type, id) => {
   }
 
   return {
+    data,
+    error,
     recommendList,
   };
 };
