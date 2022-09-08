@@ -8,6 +8,7 @@ import {
   DetailImages,
   DetailVideos,
   DetailInfo,
+  DetailRecommend
 } from "../common";
 
 import Hook from "./hook.seriesDetail";
@@ -82,6 +83,8 @@ const SeriesDetail = ({ seriesId }) => {
         </div>
         <DetailInfo media_type={"tv"} id={seriesId} />
       </div>
+
+      <DetailRecommend media_type={"tv"} id={seriesId} />
     </>
   );
 };
