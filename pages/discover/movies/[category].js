@@ -1,15 +1,14 @@
 import React from "react";
+
 import Head from "next/head";
 import { useRouter } from "next/router";
 
 /* Components */
-import { SearchResultPaginatePage } from "../../../components";
+import MovieCategory from "../../../components/movie-category";
 
-const SearchResultPage = () => {
-
+const DiscoverMovies = () => {
   const router = useRouter();
-
-  const queryText = router.query['searchQuery']
+  let category = router.query["category"];
 
   return (
     <>
@@ -18,7 +17,7 @@ const SearchResultPage = () => {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#278EA5" />
-        <meta name="title" content={`Explore ${queryText} | CINE`} />
+        <meta name="title" content={`Discover ${category} movies | CINE`} />
         <meta
           name="description"
           content="A website that provides you cinematic data with stunning UI. Torrents for movies are also available and just a touch to download them."
@@ -34,8 +33,8 @@ const SearchResultPage = () => {
         <meta name="author" content="TeNyain Moe Lwin" />
 
         {/* Primary Meta Tags */}
-        <title>Explore &ldquo;{queryText}&rdquo; | CINE</title>
-        <meta name="title" content={`Explore ${queryText} | CINE`} />
+        <title>Discover {category} movies | CINE</title>
+        <meta name="title" content={`Discover ${category} Movies | CINE`} />
         <meta
           name="description"
           content="A website that provides you cinematic data with stunning UI. Torrents for movies are also available and just a touch to download them."
@@ -44,9 +43,12 @@ const SearchResultPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content={`https://cine-ent.vercel.app/search/${queryText}/`}
+          content={`https://cine-ent.vercel.app/discover/movies/${category}`}
         />
-        <meta property="og:title" content="Upcoming Movies | CINE" />
+        <meta
+          property="og:title"
+          content={`Discover ${category} movies | CINE`}
+        />
         <meta
           property="og:description"
           content="A website that provides you cinematic data with stunning UI. Torrents for movies are also available and just a touch to download them."
@@ -56,20 +58,21 @@ const SearchResultPage = () => {
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content={`https://cine-ent.vercel.app/search/${queryText}/`}
+          content={`https://cine-ent.vercel.app/discover/movies/${category}`}
         />
-        <meta property="twitter:title" content="Upcoming Movies | CINE" />
+        <meta
+          property="twitter:title"
+          content={`Discover ${category} movies | CINE`}
+        />
         <meta
           property="twitter:description"
           content="A website that provides you cinematic data with stunning UI. Torrents for movies are also available and just a touch to download them."
         />
         <meta property="twitter:image" content="/meta.png" />
       </Head>
-      <main className="overflow-hidden">
-        <SearchResultPaginatePage />
-      </main>
+      <MovieCategory />
     </>
   );
 };
 
-export default SearchResultPage;
+export default DiscoverMovies;

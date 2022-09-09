@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <StyledEngineProvider injectFirst>
       <Provider store={store}>
-        <main className='font-primary overflow-x-hidden bg-dark min-h-screen'>
+        <main className='font-primary main-overflow bg-dark min-h-screen'>
           <NavBar/>
           <Progress isAnimating={isAnimating}/>
           <Component {...pageProps} />

@@ -227,6 +227,17 @@ button {
   background:  linear-gradient(1turn, rgb(223, 223, 223), #ffffff);
 }
 
+.main-overflow {
+  overflow: inherit;
+}
+
+@media screen and (max-width : 768px) {
+  .main-overflow {
+    overflow-x: hidden;
+  }
+  
+}
+
 .popular-now-shadow {
   box-shadow: #21e6c120 0px 8px 24px;
 }

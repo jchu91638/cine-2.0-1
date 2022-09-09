@@ -74,7 +74,7 @@ const MovieDetail = ({ movieId }) => {
       <CastsCrews media_type={"movie"} id={movieId} />
 
       <div className="flex flex-col lg:flex-row justify-between container_x_md my-16">
-        <div className="lg:w-[70%] w-[100%] mb-5 lg:mb-0">
+        <div className="lg:w-[70%] w-[100%] sticky top-20 self-start h-auto mb-5 lg:mb-0">
           <DetailImages media_type={"movie"} id={movieId} />
 
           <DetailVideos media_type={"movie"} id={movieId} />

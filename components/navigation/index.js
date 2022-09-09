@@ -42,6 +42,16 @@ const NavBar = () => {
 
         <ul className="nav-items flex list-none font-primary font-medium gap-x-4 p-0">
           {navItems.map((item, index) => {
+            let routeToGo = () => {
+              if(item === "home") {
+                return "/"
+              } else if(item === "movies") {
+                return "/discover/movies/popular"
+              } 
+              else {
+                return `/${item}`
+              }
+            }
             return (
               <li
                 key={index}
@@ -50,7 +60,7 @@ const NavBar = () => {
               >
                 <Link
                   className="p-['15px']"
-                  href={`/${item === "home" ? "" : item}`}
+                  href={routeToGo()}
                 >
                   {item}
                 </Link>

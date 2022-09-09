@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 const Movies = () => {
+
+    const router = useRouter();
+
+    useEffect(() => {
+        router.push('/discover/movies/popular');
+    }, []);
+
     return (
-        <div>
-            <h1>
-                Movies are here.
-                Many things will be happen here.
-            </h1>
-        </div>
+        <>
+        </>
     );
 }
 
