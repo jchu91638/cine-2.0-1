@@ -17,9 +17,15 @@ const MovieCategory = () => {
     currentCategory,
     data,
     error,
+    currentData,
 
     setActiveCategory,
+    setPageNo,
+    setCurrentData,
   } = Hook();
+
+  console.log({ currentData });
+
   return (
     <>
       <SearchHeader query="" />
@@ -29,8 +35,14 @@ const MovieCategory = () => {
           <div className="flex overflow-y-auto pb-3 flex-nowrap lg:flex-wrap gap-2">
             {movieCategoryList?.map((category, index) => {
               return (
-                <Link key={category.title} href={`/discover/movies/${category.title}`}>
+                <Link
+                  key={category.title}
+                  href={`/discover/movies/${category.title}`}
+                >
                   <div
+                    onClick={() => {
+                      setPageNo(1);
+                    }}
                     className={`text-wah cursor-pointer border border-solid border-light rounded-full lg:px-2 lg:py-1 min-w-[6rem] text-sm p-1 flex justify-center items-center font-bold ${
                       currentCategory === category.title && "bg-primary"
                     }`}
@@ -47,6 +59,8 @@ const MovieCategory = () => {
           setActiveCategory={setActiveCategory}
           data={data}
           error={error}
+          currentData={currentData}
+          setPageNo={setPageNo}
         />
       </div>
     </>

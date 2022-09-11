@@ -28,9 +28,17 @@ const NavBar = () => {
   ] = Hook();
 
   return (
-    <nav className={`absolute top-0 left-0 right-0 z-[500] ${!isHome && 'bg-dark shadow-sm shadow-secondary sticky'}`}>
+    <nav
+      className={`absolute top-0 left-0 right-0 z-[500] ${
+        !isHome && "bg-dark shadow-sm shadow-secondary sticky"
+      }`}
+    >
       {/* Laptops view */}
-      <div className={`lg:container md:px-4 lg:px-4 xl:px-0  hidden lg:flex justify-between items-center ${isHome ? 'py-4' : 'py-2'}`}>
+      <div
+        className={`lg:container md:px-4 lg:px-4 xl:px-0  hidden lg:flex justify-between items-center ${
+          isHome ? "py-4" : "py-2"
+        }`}
+      >
         <Image
           src={logo}
           alt="CINE logo"
@@ -43,25 +51,21 @@ const NavBar = () => {
         <ul className="nav-items flex list-none font-primary font-medium gap-x-4 p-0">
           {navItems.map((item, index) => {
             let routeToGo = () => {
-              if(item === "home") {
-                return "/"
-              } else if(item === "movies") {
-                return "/discover/movies/popular"
-              } 
-              else {
-                return `/${item}`
+              if (item === "home") {
+                return "/";
+              } else if (item === "movies") {
+                return "/discover/movies/popular";
+              } else {
+                return `/${item}`;
               }
-            }
+            };
             return (
               <li
                 key={index}
                 onClick={() => handleNavActivate(item)}
                 className={`capitalize text-wah relative flex justify-center items-center`}
               >
-                <Link
-                  className="p-['15px']"
-                  href={routeToGo()}
-                >
+                <Link className="p-['15px']" href={routeToGo()}>
                   {item}
                 </Link>
 
@@ -83,16 +87,26 @@ const NavBar = () => {
           alt="CINE logo"
           width={105}
           height={42.45}
-          onClick={navigateToHome}
+          onClick={() => {
+            setNavToggle(false);
+            navigateToHome();
+          }}
           className="cursor-pointer"
         />
 
-        <ul className={`nav-items transition-all bg-gradient-to-b from-dark to-secondary absolute top-16 left-0 right-0 list-none font-primary font-medium gap-x-4 pb-4 ${navToggle ? 'visible opacity-100' : 'opacity-0 invisible'}`}>
+        <ul
+          className={`nav-items transition-all bg-gradient-to-b from-dark to-secondary absolute top-16 left-0 right-0 list-none font-primary font-medium gap-x-4 pb-4 ${
+            navToggle ? "visible opacity-100" : "opacity-0 invisible"
+          }`}
+        >
           {navItems.map((item, index) => {
             return (
               <li
                 key={index}
-                onClick={() => handleNavActivate(item)}
+                onClick={() => {
+                  handleNavActivate(item);
+                  setNavToggle((prev) => !prev);
+                }}
                 className={`capitalize text-wah relative flex justify-center items-center`}
               >
                 <Link
