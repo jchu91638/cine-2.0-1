@@ -44,7 +44,7 @@ const SearchResultPage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content={`https://cine-ent.vercel.app/search/${queryText}/`}
+          content={`https://cine.tenyain.com/search/${queryText}/`}
         />
         <meta property="og:title" content="Upcoming Movies | CINE" />
         <meta
@@ -56,7 +56,7 @@ const SearchResultPage = () => {
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content={`https://cine-ent.vercel.app/search/${queryText}/`}
+          content={`https://cine.tenyain.com/search/${queryText}/`}
         />
         <meta property="twitter:title" content="Upcoming Movies | CINE" />
         <meta

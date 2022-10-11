@@ -26,7 +26,7 @@ const SeriesDetail = ({ id, series }) => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content={`https://cine-ent.vercel.app/series/${series.id}`}
+          content={`https://cine.tenyain.com/series/${series.id}`}
         />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={overview} />
@@ -36,7 +36,7 @@ const SeriesDetail = ({ id, series }) => {
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content={`https://cine-ent.vercel.app/series/${series.id}`}
+          content={`https://cine.tenyain.com/series/${series.id}`}
         />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={overview} />

@@ -26,7 +26,7 @@ const MovieDetail = ({ id, movie }) => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content={`https://cine-ent.vercel.app/movies/${movie.id}`}
+          content={`https://cine.tenyain.com/movies/${movie.id}`}
         />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={overview} />
@@ -36,7 +36,7 @@ const MovieDetail = ({ id, movie }) => {
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content={`https://cine-ent.vercel.app/movies/${movie.id}`}
+          content={`https://cine.tenyain.com/movies/${movie.id}`}
         />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={overview} />

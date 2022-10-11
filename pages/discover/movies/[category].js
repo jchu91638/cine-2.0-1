@@ -43,7 +43,7 @@ const DiscoverMovies = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content={`https://cine-ent.vercel.app/discover/movies/${category}`}
+          content={`https://cine.tenyain.com/discover/movies/${category}`}
         />
         <meta
           property="og:title"
@@ -58,7 +58,7 @@ const DiscoverMovies = () => {
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content={`https://cine-ent.vercel.app/discover/movies/${category}`}
+          content={`https://cine.tenyain.com/discover/movies/${category}`}
         />
         <meta
           property="twitter:title"
