@@ -55,7 +55,10 @@ const NavBar = () => {
                 return "/";
               } else if (item === "movies") {
                 return "/discover/movies/popular";
-              } else {
+              } else if (item === "series"){
+                return "/discover/series/popular"
+              }
+               else {
                 return `/${item}`;
               }
             };

@@ -6,3 +6,4 @@ export{ default as UpcomingPaginatePage } from './upcoming';
 export { default as SearchResultPaginatePage } from './search-results/SearchResults';
 
 export { default as MovieCategory } from './movie-category';
+export { default as SeriesCategory } from './series-category';

@@ -1059,67 +1059,67 @@ export const seriesCategoryList = [
     url: `tv/top_rated?api_key=${API_KEY}&language=en-US`,
   },
   {
-    title: "Action & Adventure",
+    title: "action & adventure",
     url: `discover/tv?api_key=${API_KEY}&with_genres=10759`,
   },
   {
-    title: "Animation",
+    title: "animation",
     url: `discover/tv?api_key=${API_KEY}&with_genres=16`,
   },
   {
-    title: "Comedy",
+    title: "comedy",
     url: `discover/tv?api_key=${API_KEY}&with_genres=35`,
   },
   {
-    title: "Crime",
+    title: "crime",
     url: `discover/tv?api_key=${API_KEY}&with_genres=80`,
   },
   {
-    title: "Documentary",
+    title: "documentary",
     url: `discover/tv?api_key=${API_KEY}&with_genres=99`,
   },
   {
-    title: "Drama",
+    title: "drama",
     url: `discover/tv?api_key=${API_KEY}&with_genres=18`,
   },
   {
-    title: "Family",
+    title: "family",
     url: `discover/tv?api_key=${API_KEY}&with_genres=10751`,
   },
   {
-    title: "Kids",
+    title: "kids",
     url: `discover/tv?api_key=${API_KEY}&with_genres=10762`,
   },
   {
-    title: "Mystery",
+    title: "mystery",
     url: `discover/tv?api_key=${API_KEY}&with_genres=9648`,
   },
   {
-    title: "News",
+    title: "news",
     url: `discover/tv?api_key=${API_KEY}&with_genres=10763`,
   },
   {
-    title: "Reality",
+    title: "reality",
     url: `discover/tv?api_key=${API_KEY}&with_genres=10764`,
   },
   {
-    title: "Sci-fi & Fantacy",
+    title: "sci-fi & fantacy",
     url: `discover/tv?api_key=${API_KEY}&with_genres=10765`,
   },
   {
-    title: "Soap",
+    title: "soap",
     url: `discover/tv?api_key=${API_KEY}&with_genres=10766`,
   },
   {
-    title: "Talk",
+    title: "talk",
     url: `discover/tv?api_key=${API_KEY}&with_genres=10767`,
   },
   {
-    title: "War & Politics",
+    title: "war & politics",
     url: `discover/tv?api_key=${API_KEY}&with_genres=10768`,
   },
   {
-    title: "Western",
+    title: "western",
     url: `discover/tv?api_key=${API_KEY}&with_genres=37`,
   },
 ];

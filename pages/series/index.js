@@ -1,14 +1,13 @@
-import React from 'react';
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
 
 const Series = () => {
-    return (
-        <div>
-            <h1>
-                Series are here.
-                Many things will be happen here.
-            </h1>
-        </div>
-    );
-}
+  const router = useRouter();
+  useEffect(() => {
+    router.push("/discover/series/popular");
+  }, []);
+
+  return <></>;
+};
 
 export default Series;
