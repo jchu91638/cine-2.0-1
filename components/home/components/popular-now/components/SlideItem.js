@@ -24,7 +24,7 @@ const SlideItem = ({
   return (
     <div className="py-5">
       <div className="w-[200px] relative cursor-pointer select-none">
-        <Link href={`${route_type}/${id}`}>
+        <Link href={`${route_type}/${id}`} prefetch>
           <div>
             <img className="w-[200px] rounded-xl min-h[295px] mb-1 popular-now-shadow border-2 border-solid border-secondary " src={`${poster_path}/${image}`} alt={`${title ? title : name}'s poster`} />
             <div className="px-3 py-1">

@@ -48,7 +48,7 @@ const SlideItem = ({
               {overview}
             </p>
 
-            <Link href={`/${route_type}/${id}`}>
+            <Link href={`/${route_type}/${id}`} prefetch>
               <Button variant="contained" className="btn-primary">
                 View Detail
               </Button>
