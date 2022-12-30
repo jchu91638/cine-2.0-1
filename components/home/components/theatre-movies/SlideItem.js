@@ -37,7 +37,10 @@ const SlideItem = ({ id, title, backdrop_path, media_type, overview }) => {
           handleTrailer={handleTrailer}
         />
         <div className="absolute group-hover:bg-transparent backdrop-trailer-grayscale w-full h-full flex justify-center items-center bg-black bg-opacity-50 transition-all duration-300 ease-out flex-col text-white p-7">
-          <div onClick={handleTrailer} className="cursor-pointer transform duration-200 ease">
+          <div
+            onClick={handleTrailer}
+            className="cursor-pointer transform duration-200 ease"
+          >
             <PlayCircleOutlineRounded
               fontSize="large"
               className="group-hover:scale-150 transition-all"
@@ -60,9 +63,11 @@ const SlideItem = ({ id, title, backdrop_path, media_type, overview }) => {
         <div className="w-full ml-5 pb-0 md:pb-8 flex justify-between">
           <div>
             <Link href={`/movies/${id}`}>
-              <h1 className="font-special cursor-pointer font-extrabold text-white special-text-shadow title-3">
-                {title}
-              </h1>
+              <a>
+                <h1 className="font-special cursor-pointer font-extrabold text-white special-text-shadow title-3">
+                  {title}
+                </h1>
+              </a>
             </Link>
             <p className="text-white mt-2 font-heading font-bold text-sm md:text-[18px]">
               {tagline}
