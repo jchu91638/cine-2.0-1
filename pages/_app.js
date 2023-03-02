@@ -11,7 +11,8 @@ import { store } from '../modules';
 /* Major components */
 import NavBar from '../components/navigation';
 import Progress from '../components/common/progress-bar/Progress';
-import { useProgressStore } from '../store'
+import { useProgressStore } from '../store';
+import { Footer } from '../components';
 
 /* Components */
 
@@ -48,6 +49,7 @@ function MyApp({ Component, pageProps }) {
           <NavBar/>
           <Progress isAnimating={isAnimating}/>
           <Component {...pageProps} />
+          <Footer/>
         </main>
       </Provider>
     </StyledEngineProvider>

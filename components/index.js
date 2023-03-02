@@ -7,3 +7,5 @@ export { default as SearchResultPaginatePage } from './search-results/SearchResu
 
 export { default as MovieCategory } from './movie-category';
 export { default as SeriesCategory } from './series-category';
+
+export { default as Footer } from './footer';

@@ -323,3 +323,9 @@ button {
     width: 20px !important;
   }
 }
+
+/* Footer */
+.footer {
+  background: linear-gradient(90deg,#071e3d,#1f4287);
+  color: #fff;
+}
