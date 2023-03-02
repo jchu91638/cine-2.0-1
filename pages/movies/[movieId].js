@@ -44,9 +44,9 @@ const MovieDetail = ({ id, movie }) => {
       </Head>
       {/* className="mt-[70px] lg:mt-[60px]" */}
       <section >
-        <MovieDetailPage
+        {/* <MovieDetailPage
           movieId = {id}
-        />
+        /> */}
       </section>
     </>
   );
