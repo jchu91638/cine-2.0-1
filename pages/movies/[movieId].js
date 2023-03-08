@@ -6,7 +6,7 @@ import { MOVIE_DETAIL } from "../../constants/apiLinks";
 import { API_KEY } from "../../constants/common";
 
 /* Components */
-import { MovieDetailPage } from "../../components";
+// import { MovieDetailPage } from "../../components";
 
 const MovieDetail = ({ id, movie }) => {
   const media_type = 'movie';
@@ -43,9 +43,10 @@ const MovieDetail = ({ id, movie }) => {
       </Head>
       {/* className="mt-[70px] lg:mt-[60px]" */}
       <section>
-        <MovieDetailPage
+        {/* <MovieDetailPage
           movieId = {id}
-        />
+        /> */}
+        <h1>{title}</h1>
       </section>
     </>
   );
