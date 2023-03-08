@@ -9,7 +9,7 @@ import { API_KEY } from "../../constants/common";
 import { MovieDetailPage } from "../../components";
 
 const MovieDetail = ({ id, movie }) => {
-  const media_type = "movie";
+  const media_type = 'movie';
 
   const title = movie.original_title;
   const backdrop_path = `https://www.themoviedb.org/t/p/original${movie.backdrop_path}`;
@@ -43,7 +43,9 @@ const MovieDetail = ({ id, movie }) => {
       </Head>
       {/* className="mt-[70px] lg:mt-[60px]" */}
       <section>
-        <MovieDetailPage movieId={id} />
+        <MovieDetailPage
+          movieId = {id}
+        />
       </section>
     </>
   );
@@ -52,11 +54,9 @@ const MovieDetail = ({ id, movie }) => {
 export async function getServerSideProps(context) {
   const { movieId } = context.params;
 
-  const getMovie = await Promise.all([
-    fetch(`${MOVIE_DETAIL}${movieId}?api_key=${API_KEY}`)
-      .then((res) => res.json())
-      .then((data) => data),
-  ]);
+  const getMovie = await fetch(`${MOVIE_DETAIL}${movieId}?api_key=${API_KEY}`)
+    .then((res) => res.json())
+    .then((data) => data);
 
   return {
     props: {
