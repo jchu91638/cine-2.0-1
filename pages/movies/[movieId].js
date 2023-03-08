@@ -8,10 +8,10 @@ import { API_KEY } from "../../constants/common";
 /* Components */
 import { MovieDetailPage } from "../../components";
 
-export async function getServerSideProps(context) {
-  const { movieId } = context.params;
+export async function getServerSideProps({query}) {
+  const { movieId } = query;
 
-  const res = await fetch(`${MOVIE_DETAIL}${movieId}?api_key=${API_KEY}`);
+  const res = await fetch(`${MOVIE_DETAIL}${movieId}?api_key=${API_KEY}&language=en-US`);
   const data = await res.json();
 
   if (res.ok) {
