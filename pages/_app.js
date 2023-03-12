@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps }) {
           {/* <NavBar/> */}
           <Progress isAnimating={isAnimating}/>
           <Component {...pageProps} />
-          <Footer/>
+          {/* <Footer/> */}
         </main>
       </Provider>
     </StyledEngineProvider>
