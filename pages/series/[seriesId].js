@@ -8,13 +8,44 @@ import { API_KEY } from "../../constants/common";
 /* Components */
 import { SeriesDetailPage } from "../../components";
 
+export async function getStaticPaths() {
+  const res = await fetch(
+    `https://api.themoviedb.org/3/trending/tv/day?api_key=${API_KEY}`
+  );
+
+  const data = await res.json();
+
+  return {
+    paths: data?.results?.map((d) => ({
+      params: { seriesId: d.id.toString() },
+    })),
+    fallback: "blocking",
+  };
+}
+
+export async function getStaticProps(context) {
+  const { seriesId } = context.params;
+
+  const res = await fetch(
+    `https://api.themoviedb.org/3/tv/${seriesId}?api_key=${API_KEY}&language=en-US&append_to_response=videos,releases,content_ratings`
+  );
+
+  const data = await res.json();
+
+  return {
+    props: {
+      id: seriesId,
+      series: data,
+    },
+  };
+}
+
 const SeriesDetail = ({ id, series }) => {
+  const media_type = "series";
 
-    const media_type = 'series';
-
-    const title = series.name;
-    const backdrop_path = `https://www.themoviedb.org/t/p/original${series.backdrop_path}`;
-    const overview = series.overview;
+  const title = series.name;
+  const backdrop_path = `https://www.themoviedb.org/t/p/original${series.backdrop_path}`;
+  const overview = series.overview;
 
   return (
     <>
@@ -43,28 +74,11 @@ const SeriesDetail = ({ id, series }) => {
         <meta property="twitter:image" content={backdrop_path} />
       </Head>
       {/* className="mt-[70px] lg:mt-[60px]" */}
-      <section >
-        <SeriesDetailPage
-          seriesId = {id}
-        />
+      <section>
+        <SeriesDetailPage seriesId={id} />
       </section>
     </>
   );
 };
 
 export default SeriesDetail;
-
-export async function getServerSideProps(context) {
-  const { seriesId } = context.params;
-
-  const setSeries = await fetch(`${SERIES_DETAIL}${seriesId}?api_key=${API_KEY}`)
-    .then((res) => res.json())
-    .then((data) => data);
-
-  return {
-    props: {
-      id: seriesId,
-      series: setSeries,
-    }, // will be passed to the page component as props
-  };
-}
