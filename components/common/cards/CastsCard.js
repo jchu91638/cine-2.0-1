@@ -1,13 +1,21 @@
-import React from "react";
+import Image from "next/image";
 
 /* Icons */
 import PersonIcon from "@mui/icons-material/Person";
 
 const CastsCard = ({ profile_path, image, name, character }) => {
   return (
-    <div className="inline-flex flex-col min-h-[250px] w-[110px] lg:min-h-[280px] bg-wah text-black lg:w-[120px] rounded overflow-hidden cus-box-shadow select-none">
+    <div className="inline-flex flex-col min-h-[250px] w-[110px] lg:min-h-[280px] bg-wah text-black lg:w-[119.99px] rounded overflow-hidden cus-box-shadow select-none">
       {profile_path !== null ? (
-        <img className="w-full object-contain" src={image} alt={name} />
+        <div className="w-[110px] relative lg:w-[119.99px] h-[139.5px] lg-h-[152.16px]">
+          <Image
+            layout="fill"
+            className="w-full object-cover"
+            quality="10"
+            src={image}
+            alt={name}
+          />
+        </div>
       ) : (
         <div className="text-primary bg-gray w-full min-h-[140px] lg:min-h-[9.575rem] flex justify-center items-center">
           <PersonIcon />
