@@ -169,6 +169,7 @@ button {
 
 .MuiOutlinedInput-notchedOutline {
   border-color: #278ea5 !important;
+  border-width: 4px !important;
 }
 
 .MuiInputBase-input {

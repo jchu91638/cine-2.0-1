@@ -30,7 +30,7 @@ const MovieCategory = () => {
     <>
       <SearchHeader query="" />
 
-      <div className="flex relative flex-col justify-evenly lg:flex-row container_x_md py-5">
+      <div className="flex relative flex-col justify-evenly lg:flex-row container_x_md py-12">
         <div className="max-w-full mb-6 h-auto self-start sticky top-20 flex-2 lg:max-w-[248px]">
           <div className="flex overflow-y-auto pb-3 flex-nowrap lg:flex-wrap gap-2">
             {movieCategoryList?.map((category, index) => {

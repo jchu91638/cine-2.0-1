@@ -9,7 +9,7 @@ import SlideItem from "./SlideItem";
 const TheatreMovies = ({ data, loading, error }) => {
   return (
     <section>
-      <div className="py-4">
+      <div className="py-10">
         <div>
           <div className="container_x_md">
             <h1 className="title-2 font-heading text-white">In Theatres</h1>

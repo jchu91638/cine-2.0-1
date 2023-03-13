@@ -25,7 +25,7 @@ const PopularNow = ({
 
     return (
         <section className='text-white bg-popular-bg-sm md:bg-popular-bg-lg bg-popular'>
-            <div className='container_x_md py-12'>
+            <div className='container_x_md py-12 mt-6'>
                 <h1 className='title-2 mb-5'>
                     Popular Now
                 </h1>

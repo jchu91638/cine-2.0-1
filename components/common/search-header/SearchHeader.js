@@ -30,7 +30,7 @@ const SearchHeader = ({
           <form onSubmit={handleEnterInput}>
             <TextField
               fullWidth
-              label="Search for movies, series and celebrities"
+              label="Search for movies and series"
               id="fullWidth"
               autoComplete="off"
               variant="filled"

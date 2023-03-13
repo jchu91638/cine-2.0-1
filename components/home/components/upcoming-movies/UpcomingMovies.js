@@ -35,7 +35,7 @@ const UpcomingMovies = ({ data, loading, error }) => {
   return (
     <>
       <section className="bg-upcoming">
-        <div className="container_x_md py-12">
+        <div className="container_x_md py-20">
           <div className="flex flex-col md:flex-row gap-4 mb-8 md:justify-between items-center">
             <h1 className="title-2 mb-5 text-white">Upcoming Movies</h1>
 
@@ -65,7 +65,7 @@ const UpcomingMovies = ({ data, loading, error }) => {
                   onClick={handelMaxNum}
                   className="border-primary text-primary capitalize table mx-auto"
                   variant="outlined"
-                  size="small"
+                  size="large"
                 >
                   View More
                 </Button>
@@ -74,7 +74,7 @@ const UpcomingMovies = ({ data, loading, error }) => {
                   <Button
                     className="border-primary text-primary capitalize table mx-auto"
                     variant="outlined"
-                    size="small"
+                    size="large"
                   >
                     View All
                   </Button>
