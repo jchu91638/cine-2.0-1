@@ -1,7 +1,7 @@
 import React from "react";
 
 /* Icons */
-// import { Person } from "@mui/icons-material";
+import PersonIcon from "@mui/icons-material/Person";
 
 const CrewsCard = ({ image, name, job }) => {
   return (
@@ -14,8 +14,7 @@ const CrewsCard = ({ image, name, job }) => {
         />
       ) : (
         <div className=" flex justify-center items-center text-primary w-[60px] h-[75px]">
-          {/* <Person /> */}
-          <p>icon</p>
+          <PersonIcon />
         </div>
       )}
 

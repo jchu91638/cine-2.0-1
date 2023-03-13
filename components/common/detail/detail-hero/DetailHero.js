@@ -1,12 +1,12 @@
-import React from "react";
 import Link from "next/link";
 
 /* Icons */
-// import { AccessTimeSharp, StarRateRounded, People } from "@mui/icons-material";
 import AccessTimeSharpIcon from '@mui/icons-material/AccessTimeSharp';
+import StarRateRoundedIcon from '@mui/icons-material/StarRateRounded';
+import PeopleIcon from '@mui/icons-material/People';
 
 /* Components */
-import { Button, CircularProgress } from "@mui/material";
+import Button from '@mui/material/Button';
 import DetailTorrent from "../detail-torrent/DetailTorrent";
 
 const DetailHero = ({
@@ -121,16 +121,14 @@ const DetailHero = ({
 
                     <div className="flex gap-x-4">
                       <div className="inline-flex gap-y-2">
-                        {/* <StarRateRounded className="w-8" /> */}
-                        <p>icon</p>
+                        <StarRateRoundedIcon className="w-8" />
                         <p className="text-cfs-2 font-bold  flex justify-center items-center">
                           {rating}
                         </p>
                       </div>
 
                       <div className="inline-flex gap-y-2">
-                        {/* <People className="w-8" /> */}
-                        <p>icon</p>
+                        <PeopleIcon className="w-8" />
                         <p className="text-cfs-2 font-bold flex justify-center items-center">
                           {popularity}
                         </p>
