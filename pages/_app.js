@@ -56,4 +56,16 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
+MyApp.getInitialProps = async ({ Component, ctx }) => {
+  try {
+    return await App.getInitialProps(ctx);
+  } catch (error) {
+    return {
+      pageProps: {
+        statusCode: error.statusCode || 500,
+      },
+    };
+  }
+};
+
 export default MyApp;
