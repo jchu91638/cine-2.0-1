@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
-// import {
-//   ArrowBackIosRounded,
-//   ArrowForwardIosRounded,
-// } from "@mui/icons-material";
+
+// Icons
+import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
+import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 
 const Pagination = (props) => {
   let page_arr = [],
@@ -64,8 +64,7 @@ const Pagination = (props) => {
         <Link key={item} href={`${routeUrl}${item}`}>
           <div
             onClick={() => props.pageClick(item)}
-            className={`pagination-item ${item === props.page && 'bg-primary'}`
-            }
+            className={`pagination-item ${item === props.page && "bg-primary"}`}
           >
             <p className="mb-0">{item}</p>
           </div>
@@ -79,7 +78,9 @@ const Pagination = (props) => {
           <Link key={item} href={`${routeUrl}${item}`}>
             <div
               onClick={() => props.pageClick(item)}
-              className={`pagination-item ${item === props.page && 'bg-primary'}`}
+              className={`pagination-item ${
+                item === props.page && "bg-primary"
+              }`}
             >
               <p className="mb-0">{item}</p>
             </div>
@@ -98,7 +99,9 @@ const Pagination = (props) => {
           <Link key={item} href={`${routeUrl}${item}`}>
             <div
               onClick={() => props.pageClick(item)}
-              className={`pagination-item ${item === props.page && 'bg-primary'}`}
+              className={`pagination-item ${
+                item === props.page && "bg-primary"
+              }`}
             >
               <p className="mb-0">{item}</p>
             </div>
@@ -112,21 +115,19 @@ const Pagination = (props) => {
 
   return (
     <>
-      <div className='paginate-wrapper w-full md:w-1/2 mx-auto mt-12 flex justify-center items-center'>
+      <div className="paginate-wrapper w-full md:w-1/2 mx-auto mt-12 flex justify-center items-center">
         {props.page === 1 ? (
           <button onClick={props.goToBackPage} disabled={props.page === 1}>
-            {/* <ArrowBackIosRounded /> */}
-            <p>icon</p>
+            <ArrowBackIosRoundedIcon />
           </button>
         ) : (
           <Link href={`${routeUrl}${props.page - 1}`}>
             <button onClick={props.goToBackPage} disabled={props.page === 1}>
-              {/* <ArrowBackIosRounded /> */}
-              <p>icon</p>
+              <ArrowBackIosRoundedIcon />
             </button>
           </Link>
         )}
-        <div className='mr-3 text-wah'>
+        <div className="mr-3 text-wah">
           {startOfPagination}
           {startOfPagination !== "" && <span> ... </span>}
           {paginationNow}
@@ -138,8 +139,8 @@ const Pagination = (props) => {
             onClick={props.goToNextPage}
             disabled={props.page === page_arr.length}
           >
-            {/* <ArrowForwardIosRounded /> */}
-            <p>icon</p>
+            <ArrowForwardIosRoundedIcon />
+
           </button>
         ) : (
           <Link href={`${routeUrl}${props.page + 1}`}>
@@ -147,8 +148,8 @@ const Pagination = (props) => {
               onClick={props.goToNextPage}
               disabled={props.page === page_arr.length}
             >
-              {/* <ArrowForwardIosRounded /> */}
-              <p>icon</p>
+              <ArrowForwardIosRoundedIcon />
+  
             </button>
           </Link>
         )}

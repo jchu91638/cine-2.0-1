@@ -2,7 +2,7 @@ import useSWR from "swr";
 import Link from "next/link";
 
 /* Icons */
-// import { PhotoTwoTone } from "@mui/icons-material";
+import InsertPhotoTwoToneIcon from '@mui/icons-material/InsertPhotoTwoTone';
 
 const Hook = (media_type, id) => {
   let url = `https://api.themoviedb.org/3/${media_type}/${id}/recommendations?api_key=68d49bbc8d40fff0d6cafaa7bfd48072&language=en-US`;
@@ -35,8 +35,7 @@ const Hook = (media_type, id) => {
                 />
               ) : (
                 <div className="w-[225px] min-h-[126.6px] lg:w-[263px] lg:min-h-[148.4px] rounded mb-3 text-primary flex justify-center items-center">
-                  {/* <PhotoTwoTone /> */}
-                  <p>icon</p>
+                  <InsertPhotoTwoToneIcon />
                 </div>
               )}
 

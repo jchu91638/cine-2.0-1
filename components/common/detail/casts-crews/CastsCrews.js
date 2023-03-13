@@ -12,8 +12,8 @@ import "swiper/css/navigation";
 import { FreeMode } from "swiper";
 
 /* Icons */
-// import { ArrowCircleRight } from "@mui/icons-material";
-import CircularProgress from '@mui/material/CircularProgress';
+import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
+import CircularProgress from "@mui/material/CircularProgress";
 
 /* Hook */
 import Hook from "./hook.castsCrews";
@@ -74,8 +74,7 @@ const CastsCrews = ({ media_type, id }) => {
                 <div className=" min-h-[250px] w-[6.875rem] lg:w-auto lg:min-h-[280px] bg-black rounded border-light flex flex-col justify-center items-center  border border-solid text-white">
                   <p className="text-center">View all credits</p>
 
-                  {/* <ArrowCircleRight /> */}
-                  <p>icon</p>
+                  <ArrowCircleRightIcon />
                 </div>
               </SwiperSlide>
             </Swiper>
@@ -129,8 +128,7 @@ const CastsCrews = ({ media_type, id }) => {
                 <div className="h-full bg-black rounded border border-solid border-light flex justify-center items-center gap-x-2 text-wah min-h-[76px]">
                   <p>View all credits</p>
 
-                  {/* <ArrowCircleRight /> */}
-                  <p>icon</p>
+                  <ArrowCircleRightIcon />
                 </div>
               </SwiperSlide>
             </Swiper>

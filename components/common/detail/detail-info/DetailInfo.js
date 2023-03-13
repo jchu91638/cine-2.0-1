@@ -4,7 +4,7 @@ import React from "react";
 import Hook from "./hook.detailInfo";
 
 /* Icons */
-// import { InsertLinkOutlined } from "@mui/icons-material";
+import InsertLinkOutlinedIcon from '@mui/icons-material/InsertLinkOutlined';
 import CircularProgress from '@mui/material/CircularProgress';
 import {
   Facebook,
@@ -42,8 +42,7 @@ const DetailInfo = ({ media_type, id }) => {
           <div className="text-secondary w-full mb-5">
             <div className="flex justify-between items-center">
               <a href={homepage} target="_blank" rel="noreferrer">
-                {/* <InsertLinkOutlined /> */}
-                <p>icon</p>
+                <InsertLinkOutlinedIcon />
               </a>
 
               {facebook && (

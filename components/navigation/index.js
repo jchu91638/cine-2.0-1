@@ -6,7 +6,8 @@ import Hook from "./hook.navBar";
 
 /* Images & icons */
 import { logo } from "../../assets/common";
-// import { MenuRounded, CloseRounded } from "@mui/icons-material";
+import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 
 /* Routes */
 import * as routes from "../../constants/routePaths";
@@ -55,10 +56,9 @@ const NavBar = () => {
                 return "/";
               } else if (item === "movies") {
                 return "/discover/movies/popular";
-              } else if (item === "series"){
-                return "/discover/series/popular"
-              }
-               else {
+              } else if (item === "series") {
+                return "/discover/series/popular";
+              } else {
                 return `/${item}`;
               }
             };
@@ -134,11 +134,9 @@ const NavBar = () => {
           className="bg-transparent outline-none border-none text-wah"
         >
           {navToggle ? (
-            // <CloseRounded fontSize="large" />
-            <p>icon</p>
+            <CloseRoundedIcon fontSize="large" />
           ) : (
-            // <MenuRounded fontSize="large" />
-            <p>icon</p>
+            <MenuRoundedIcon fontSize="large" />
           )}
         </button>
       </div>

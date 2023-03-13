@@ -4,7 +4,7 @@ import React from "react";
 import Hook from "./hook.detailVideo";
 
 /* Components */
-// import { ArrowCircleRight } from "@mui/icons-material";
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import CircularProgress from '@mui/material/CircularProgress';
 
 const DetailVideos = ({ media_type, id }) => {
@@ -30,8 +30,7 @@ const DetailVideos = ({ media_type, id }) => {
             <div className="border border-solid border-light bg-black min-w-[200px] h-[250px] text-wah flex justify-center items-center">
               <p className="mr-3">View More</p>
 
-              {/* <ArrowCircleRight /> */}
-              <p>icon</p>
+              <ArrowCircleRightIcon />
             </div>
           )}
         </section>
