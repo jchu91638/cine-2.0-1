@@ -3,6 +3,7 @@ import Link from "next/link";
 
 /* Icons */
 // import { AccessTimeSharp, StarRateRounded, People } from "@mui/icons-material";
+import AccessTimeSharpIcon from '@mui/icons-material/AccessTimeSharp';
 
 /* Components */
 import { Button, CircularProgress } from "@mui/material";
@@ -88,8 +89,7 @@ const DetailHero = ({
                       <div>
                         {runtime !== "m" && runtime !== "undefinedm" && (
                           <p className="flex justify-center items-center gap-x-1 text-[0.8rem] lg:text-cfs-1">
-                            {/* <AccessTimeSharp className="w-4" /> */}
-                            <p>icon</p>
+                            <AccessTimeSharpIcon className="w-4" />
                             {runtime}
                           </p>
                         )}
