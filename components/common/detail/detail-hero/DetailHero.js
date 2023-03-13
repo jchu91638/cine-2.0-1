@@ -155,13 +155,13 @@ const DetailHero = ({
           </div>
         </section>
       )}
-      {
+      {/* {
         loading && (
           <div className="h-[80vh] flex justify-center items-center">
             <CircularProgress/>
           </div>
         )
-      }
+      } */}
     </>
   );
 };

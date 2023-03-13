@@ -9,7 +9,7 @@ import { openYTPopUp, closeYTPopUp } from '../../modules/reducer.popUp';
 /* Constant */
 import { navItems } from "../../constants/uiData";
 
-const Hook = (id) => {
+const Hook = (id, movieData) => {
   const dispatch = useDispatch();
   const { isYTPopUp } = useSelector((state) => state.popUp)
 
@@ -43,7 +43,7 @@ const Hook = (id) => {
     popularity,
     imdbID,
     trailer
-  } = getMovieDetail(id);
+  } = getMovieDetail(id,movieData);
 
   return {
     //#region - getMovieDetail

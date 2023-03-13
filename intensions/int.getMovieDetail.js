@@ -4,7 +4,7 @@ import { TMDB_IMG, TMDB_IMG_RES } from "../constants/common";
 /* Utils */
 import { timeConvert } from '../util/timeConvert'
 
-const IntGetMovieDetail = (id) => {
+const IntGetMovieDetail = (id,movieData) => {
   const { data, error, isLoading } = useGetMovieDetailQuery(id);
 
   /* root values */
@@ -15,23 +15,23 @@ const IntGetMovieDetail = (id) => {
   /* extended values */
   //#region 
   /* constants */
-  const title = gmd_data?.original_title;
-  const heroBackground = `${TMDB_IMG}${TMDB_IMG_RES.backdrop_sizes[1]}${gmd_data?.backdrop_path}`;
-  const poster = `${TMDB_IMG}${TMDB_IMG_RES.poster_sizes[4]}${gmd_data?.poster_path}`;
+  const title = movieData?.original_title;
+  const heroBackground = `${TMDB_IMG}${TMDB_IMG_RES.backdrop_sizes[1]}${movieData?.backdrop_path}`;
+  const poster = `${TMDB_IMG}${TMDB_IMG_RES.poster_sizes[4]}${movieData?.poster_path}`;
 
-  const releasedDate = gmd_data?.release_date;
+  const releasedDate = movieData?.release_date;
   const releasedYear =
     releasedDate !== "" ? releasedDate?.substring(0, 4) : "Unknown";
 
-  const getRating = gmd_data?.releases.countries;
-  const genres = gmd_data?.genres;
-  const runtime = gmd_data?.runtime && timeConvert(gmd_data?.runtime);
-  const status = gmd_data?.status;
-  const tagline = gmd_data?.tagline;
-  const overview = gmd_data?.overview;
-  const rating = gmd_data?.vote_average;
-  const popularity = gmd_data?.popularity;
-  const imdbID = gmd_data?.imdb_id;
+  const getRating = movieData?.releases.countries;
+  const genres = movieData?.genres;
+  const runtime = movieData?.runtime && timeConvert(movieData?.runtime);
+  const status = movieData?.status;
+  const tagline = movieData?.tagline;
+  const overview = movieData?.overview;
+  const rating = movieData?.vote_average;
+  const popularity = movieData?.popularity;
+  const imdbID = movieData?.imdb_id;
 
   //#endregion
 
@@ -60,12 +60,12 @@ const IntGetMovieDetail = (id) => {
     let rating_arr = [];
 
     contentRating_US = getRating?.filter((item) => {
-      return item.iso_3166_1 === "US";
+      return item?.iso_3166_1 === "US";
     });
 
     // console.log({contentRating_US})
 
-    contentRating_US?.map((item) => rating_arr.push(item.certification));
+    contentRating_US?.map((item) => rating_arr.push(item?.certification));
 
     let check = (list) => list.every((item) => list.indexOf(item) === 0);
 
@@ -96,15 +96,15 @@ const IntGetMovieDetail = (id) => {
    */
   //#region 
    let trailer_official, trailer;
-   if (gmd_data?.videos?.results.length > 0) {
-       trailer_official = data.videos.results.filter(item => {
-           return (item.type === 'Trailer' && item.official === true)
+   if (movieData?.videos?.results.length > 0) {
+       trailer_official = movieData?.videos.results.filter(item => {
+           return (item?.type === 'Trailer' && item?.official === true)
        });
 
        if (trailer_official.length === 0) {
-           trailer_official = data.videos.results.filter(item => {
-               if (item.type === 'Trailer') {
-                   return (item.type === 'Trailer')
+           trailer_official = movieData?.videos.results.filter(item => {
+               if (item?.type === 'Trailer') {
+                   return (item?.type === 'Trailer')
                }
                else {
                    return (item);

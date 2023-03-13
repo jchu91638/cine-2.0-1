@@ -13,7 +13,7 @@ import {
 
 import Hook from "./hook.movieDetail";
 
-const MovieDetail = ({ movieId }) => {
+const MovieDetail = ({ movieId, movieData }) => {
   const {
     //#region - getMovieDetail
     gmd_data,
@@ -40,7 +40,7 @@ const MovieDetail = ({ movieId }) => {
     open_YTPopUp,
     close_YTPopUp,
     //#endregion
-  } = Hook(movieId);
+  } = Hook(movieId, movieData);
 
   return (
     <>
