@@ -8,22 +8,54 @@ import { API_KEY } from "../../constants/common";
 /* Components */
 import { MovieDetailPage } from "../../components";
 
-export async function getServerSideProps({ query }) {
-  const { movieId } = query;
+// export async function getServerSideProps({ query }) {
+//   const { movieId } = query;
 
+//   const res = await fetch(
+//     `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=en-US`
+//   );
+//   const data = await res.json();
+
+//   if (res.ok) {
+//     return {
+//       props: {
+//         id: movieId,
+//         movie: data,
+//       },
+//     };
+//   }
+// }
+
+export async function getStaticPaths() {
   const res = await fetch(
-    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=en-US`
+    `https://api.themoviedb.org/3/movie/now_playing?api_key=${API_KEY}&language=en-US&page=1`
   );
+
   const data = await res.json();
 
-  if (res.ok) {
-    return {
-      props: {
-        id: movieId,
-        movie: data,
-      },
-    };
-  }
+  return {
+    paths: data?.results?.map((d) => ({
+      params: { movieId: d.id.toString() },
+    })),
+    fallback: "blocking",
+  };
+}
+
+export async function getStaticProps(context) {
+  const { movieId } = context.params;
+
+  const res = await fetch(
+    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}&language=en-US&append_to_response=videos,releases,content_ratings`
+  );
+
+  const data = await res.json();
+
+  return {
+    props: {
+      id: movieId,
+      movie: data,
+    },
+  };
 }
 
 const MovieDetail = ({ id, movie }) => {
