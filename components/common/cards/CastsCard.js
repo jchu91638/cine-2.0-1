@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* Icons */
-import { Person } from '@mui/icons-material';
+// import { Person } from '@mui/icons-material';
 
 const CastsCard = ({
     profile_path,
@@ -16,7 +16,8 @@ const CastsCard = ({
                 <img className='w-full object-contain' src={image} alt={name} />
                 :
                 <div className='text-primary bg-gray w-full min-h-[140px] lg:min-h-[9.575rem] flex justify-center items-center'>
-                    <Person/>
+                    {/* <Person/> */}
+                    <p>icon</p>
                 </div>
             }
 

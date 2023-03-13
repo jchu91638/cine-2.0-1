@@ -1,9 +1,9 @@
 import React from "react";
 import Link from "next/link";
-import {
-  ArrowBackIosRounded,
-  ArrowForwardIosRounded,
-} from "@mui/icons-material";
+// import {
+//   ArrowBackIosRounded,
+//   ArrowForwardIosRounded,
+// } from "@mui/icons-material";
 
 const Pagination = (props) => {
   let page_arr = [],
@@ -115,12 +115,14 @@ const Pagination = (props) => {
       <div className='paginate-wrapper w-full md:w-1/2 mx-auto mt-12 flex justify-center items-center'>
         {props.page === 1 ? (
           <button onClick={props.goToBackPage} disabled={props.page === 1}>
-            <ArrowBackIosRounded />
+            {/* <ArrowBackIosRounded /> */}
+            <p>icon</p>
           </button>
         ) : (
           <Link href={`${routeUrl}${props.page - 1}`}>
             <button onClick={props.goToBackPage} disabled={props.page === 1}>
-              <ArrowBackIosRounded />
+              {/* <ArrowBackIosRounded /> */}
+              <p>icon</p>
             </button>
           </Link>
         )}
@@ -136,7 +138,8 @@ const Pagination = (props) => {
             onClick={props.goToNextPage}
             disabled={props.page === page_arr.length}
           >
-            <ArrowForwardIosRounded />
+            {/* <ArrowForwardIosRounded /> */}
+            <p>icon</p>
           </button>
         ) : (
           <Link href={`${routeUrl}${props.page + 1}`}>
@@ -144,7 +147,8 @@ const Pagination = (props) => {
               onClick={props.goToNextPage}
               disabled={props.page === page_arr.length}
             >
-              <ArrowForwardIosRounded />
+              {/* <ArrowForwardIosRounded /> */}
+              <p>icon</p>
             </button>
           </Link>
         )}

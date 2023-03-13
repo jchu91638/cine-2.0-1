@@ -2,7 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 
 /* Icons */
-import { PhotoTwoTone } from "@mui/icons-material";
+// import { PhotoTwoTone } from "@mui/icons-material";
 
 const SearchResultCard = ({ id, title, image, name, isSeries }) => {
   const router = useRouter();
@@ -28,7 +28,8 @@ const SearchResultCard = ({ id, title, image, name, isSeries }) => {
           />
         ) : (
           <div className="min-w-[150px]  cus-box-shadow min-h-[223px] max-h-[225px] object-cover rounded-md border-2 border-solid border-gray flex justify-center items-center text-primary bg-gray">
-            <PhotoTwoTone />
+            {/* <PhotoTwoTone /> */}
+            <p>icon</p>
           </div>
         )}
       </div>

@@ -6,7 +6,7 @@ import Hook from "./hook.navBar";
 
 /* Images & icons */
 import { logo } from "../../assets/common";
-import { MenuRounded, CloseRounded } from "@mui/icons-material";
+// import { MenuRounded, CloseRounded } from "@mui/icons-material";
 
 /* Routes */
 import * as routes from "../../constants/routePaths";
@@ -134,9 +134,11 @@ const NavBar = () => {
           className="bg-transparent outline-none border-none text-wah"
         >
           {navToggle ? (
-            <CloseRounded fontSize="large" />
+            // <CloseRounded fontSize="large" />
+            <p>icon</p>
           ) : (
-            <MenuRounded fontSize="large" />
+            // <MenuRounded fontSize="large" />
+            <p>icon</p>
           )}
         </button>
       </div>

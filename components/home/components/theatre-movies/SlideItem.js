@@ -5,7 +5,7 @@ import Link from "next/link";
 import Hook from "./hook.slideItem";
 
 /* Icons */
-import { PlayCircleOutlineRounded, StarRateRounded } from "@mui/icons-material";
+// import { PlayCircleOutlineRounded, StarRateRounded } from "@mui/icons-material";
 import { Imdb } from "@icons-pack/react-simple-icons";
 
 /* Components */
@@ -41,10 +41,11 @@ const SlideItem = ({ id, title, backdrop_path, media_type, overview }) => {
             onClick={handleTrailer}
             className="cursor-pointer transform duration-200 ease"
           >
-            <PlayCircleOutlineRounded
+            {/* <PlayCircleOutlineRounded
               fontSize="large"
               className="group-hover:scale-150 transition-all"
-            />
+            /> */}
+                             <p>icon</p>
           </div>
           <p className="mt-4">Watch Trailer</p>
         </div>
@@ -76,7 +77,8 @@ const SlideItem = ({ id, title, backdrop_path, media_type, overview }) => {
             <div className="flex mt-3">
               <div className="flex justify-start items-center mr-8 text-warning">
                 <span>
-                  <StarRateRounded />
+                  {/* <StarRateRounded /> */}
+                  <p>icon</p>
                 </span>
                 <h1 className="text-wah text-lg">{rating}</h1>
               </div>

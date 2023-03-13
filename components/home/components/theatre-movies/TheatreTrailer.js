@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* Icons */
-import { CancelSharp } from '@mui/icons-material';
+// import { CancelSharp } from '@mui/icons-material';
 
 const TheatreTrailer = ({
     trailer,
@@ -11,7 +11,8 @@ const TheatreTrailer = ({
     return (
         <div className={`absolute w-full h-full top-0 left-0 z-[2000] trailer-bg flex items-start justify-center flex-row-reverse ${showTrailer ? 'visible opacity-100':'invisible opacity-0'}`}>
             <button className='text-danger cursor-pointer bg-transparent absolute top-3 right-1' onClick={handleTrailer}>
-            <CancelSharp/>
+            {/* <CancelSharp/> */}
+            <p>icon</p>
             </button>
 
             {

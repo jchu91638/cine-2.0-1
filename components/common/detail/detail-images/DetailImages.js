@@ -4,7 +4,7 @@ import React from "react";
 import Hook from "./hook.detailImages";
 
 /* Icons */
-import { ArrowCircleRight } from "@mui/icons-material";
+// import { ArrowCircleRight } from "@mui/icons-material";
 import { CircularProgress } from "@mui/material";
 
 const DetailImages = ({ media_type, id }) => {
@@ -31,7 +31,8 @@ const DetailImages = ({ media_type, id }) => {
             <div className="min-w-[200px] lg:min-w-[350px] text-wah flex justify-center items-center border border-light border-solid">
               <p className="mr-3 mb-0">View More</p>
 
-              <ArrowCircleRight />
+              {/* <ArrowCircleRight /> */}
+              <p>icon</p>
             </div>
           )}
         </div>

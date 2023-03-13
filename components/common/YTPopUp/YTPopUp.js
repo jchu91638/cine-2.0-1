@@ -1,5 +1,5 @@
 import React from "react";
-import { Cancel } from "@mui/icons-material";
+// import { Cancel } from "@mui/icons-material";
 
 /* Hook */
 import Hook from "./hook.YTPopUp";
@@ -20,7 +20,8 @@ const YTPopUp = ({ trailer, isYTPopUp, close_YTPopUp }) => {
         ></div>
         <div className="relative z-[10000] flex items-end flex-col w-11/12 h-[35%]   md:w-4/5 md:h-[45%] lg:h-4/5 lg:w-1/2">
           <button onClick={() => close_YTPopUp()} className="text-danger bg-transparent mb-2 cursor-pointer w-[50px] h-[20px]">
-            <Cancel />
+            {/* <Cancel /> */}
+            <p>icon</p>
           </button>
           {trailer !== null ? (
             <iframe

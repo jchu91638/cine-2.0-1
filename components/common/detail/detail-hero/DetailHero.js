@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 /* Icons */
-import { AccessTimeSharp, StarRateRounded, People } from "@mui/icons-material";
+// import { AccessTimeSharp, StarRateRounded, People } from "@mui/icons-material";
 
 /* Components */
 import { Button, CircularProgress } from "@mui/material";
@@ -88,7 +88,8 @@ const DetailHero = ({
                       <div>
                         {runtime !== "m" && runtime !== "undefinedm" && (
                           <p className="flex justify-center items-center gap-x-1 text-[0.8rem] lg:text-cfs-1">
-                            <AccessTimeSharp className="w-4" />
+                            {/* <AccessTimeSharp className="w-4" /> */}
+                            <p>icon</p>
                             {runtime}
                           </p>
                         )}
@@ -120,14 +121,16 @@ const DetailHero = ({
 
                     <div className="flex gap-x-4">
                       <div className="inline-flex gap-y-2">
-                        <StarRateRounded className="w-8" />
+                        {/* <StarRateRounded className="w-8" /> */}
+                        <p>icon</p>
                         <p className="text-cfs-2 font-bold  flex justify-center items-center">
                           {rating}
                         </p>
                       </div>
 
                       <div className="inline-flex gap-y-2">
-                        <People className="w-8" />
+                        {/* <People className="w-8" /> */}
+                        <p>icon</p>
                         <p className="text-cfs-2 font-bold flex justify-center items-center">
                           {popularity}
                         </p>
