@@ -4,7 +4,7 @@ import React from "react";
 import Hook from "./hook.searchInput";
 
 /* Components */
-import { TextField } from "@mui/material";
+import TextField from '@mui/material/TextField';
 
 const SearchInput = () => {
   const {

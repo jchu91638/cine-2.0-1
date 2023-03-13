@@ -4,7 +4,7 @@ import React from "react";
 import Hook from "./hook.seriesResult";
 
 /* Components */
-import { CircularProgress } from "@mui/material";
+import CircularProgress from '@mui/material/CircularProgress';
 import SearchResultCard from "../../../common/cards/SearchResultCard";
 import { Pagination } from "../../../common";
 

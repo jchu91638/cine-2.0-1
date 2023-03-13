@@ -1,7 +1,7 @@
 import React from "react";
 
 /* Components */
-import { CircularProgress } from "@mui/material";
+import CircularProgress from '@mui/material/CircularProgress';
 import { SwiperTheatre } from "../../../common/swipers";
 import { SwiperSlide } from "swiper/react";
 import SlideItem from "./SlideItem";

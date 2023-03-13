@@ -5,9 +5,9 @@ import Link from "next/link";
 import Hook from "./hook.upcomingMovies";
 
 /* Components */
-import { CircularProgress } from "@mui/material";
+import CircularProgress from '@mui/material/CircularProgress';
 import UpcomingItem from "./UpcomingItem";
-import { Button } from "@mui/material";
+import Button from '@mui/material/Button';
 
 const UpcomingMovies = ({ data, loading, error }) => {
   const {

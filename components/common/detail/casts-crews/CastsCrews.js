@@ -13,7 +13,7 @@ import { FreeMode } from "swiper";
 
 /* Icons */
 // import { ArrowCircleRight } from "@mui/icons-material";
-import { CircularProgress } from "@mui/material";
+import CircularProgress from '@mui/material/CircularProgress';
 
 /* Hook */
 import Hook from "./hook.castsCrews";

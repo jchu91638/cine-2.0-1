@@ -4,7 +4,7 @@ import { SwiperSlide } from "swiper/react";
 /* Components */
 import SwiperPopular from "../../../../common/swipers/swiper.popular";
 import SlideItem from "./SlideItem";
-import { CircularProgress } from "@mui/material";
+import CircularProgress from '@mui/material/CircularProgress';
 
 const PopularSeries = ({ data, error, loading }) => {
   return (

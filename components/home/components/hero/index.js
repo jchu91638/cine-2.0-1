@@ -7,7 +7,7 @@ import { useGetTrendingAllDayQuery } from "../../../../services/services.home";
 import SwiperHero from "../../../common/swipers/swiper.hero";
 import { SwiperSlide } from "swiper/react";
 import SlideItem from "./SlideItem";
-import { CircularProgress } from "@mui/material";
+import CircularProgress from '@mui/material/CircularProgress';
 
 const Hero = ({ data, error, loading, slideItemData }) => {
   // const { data, error, isLoading } = useGetTrendingAllDayQuery();

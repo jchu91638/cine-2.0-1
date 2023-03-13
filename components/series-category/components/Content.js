@@ -6,7 +6,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import SearchResultCard from "../../common/cards/SearchResultCard";
 
 /* Icons */
-import { CircularProgress } from "@mui/material";
+import CircularProgress from '@mui/material/CircularProgress';
 
 const Content = ({
   currentCategory,

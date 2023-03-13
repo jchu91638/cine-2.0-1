@@ -5,7 +5,7 @@ import Hook from "./hook.detailImages";
 
 /* Icons */
 // import { ArrowCircleRight } from "@mui/icons-material";
-import { CircularProgress } from "@mui/material";
+import CircularProgress from '@mui/material/CircularProgress';
 
 const DetailImages = ({ media_type, id }) => {
   const { data, error, backdropsList, view_more } = Hook(media_type, id);

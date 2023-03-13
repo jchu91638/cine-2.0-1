@@ -5,7 +5,7 @@ import Hook from "./hook.detailInfo";
 
 /* Icons */
 // import { InsertLinkOutlined } from "@mui/icons-material";
-import { CircularProgress } from "@mui/material";
+import CircularProgress from '@mui/material/CircularProgress';
 import {
   Facebook,
   Imdb,

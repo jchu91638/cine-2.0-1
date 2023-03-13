@@ -4,7 +4,7 @@ import React from "react";
 import Hook from "./hook.upcomingPaginate";
 
 /* Components */
-import { CircularProgress } from "@mui/material";
+import CircularProgress from '@mui/material/CircularProgress';
 import UpcomingItem from "../home/components/upcoming-movies/UpcomingItem";
 import Pagination from "../common/pagination";
 

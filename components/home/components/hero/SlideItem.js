@@ -5,7 +5,7 @@ import Link from "next/link";
 import { TMDB_IMG } from "../../../../constants/common";
 
 /* Components */
-import { Button } from "@mui/material";
+import Button from '@mui/material/Button';
 
 /* Util */
 import { typeCheck } from "../../../../util/typeCheck";

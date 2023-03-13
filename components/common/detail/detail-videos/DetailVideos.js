@@ -5,7 +5,7 @@ import Hook from "./hook.detailVideo";
 
 /* Components */
 // import { ArrowCircleRight } from "@mui/icons-material";
-import { CircularProgress } from "@mui/material";
+import CircularProgress from '@mui/material/CircularProgress';
 
 const DetailVideos = ({ media_type, id }) => {
   const { data, error, trailersList, view_more } = Hook(media_type, id);

@@ -3,7 +3,7 @@ import React from "react";
 import Hook from "./hook.detailRecommend";
 
 /* Icons */
-import { CircularProgress } from "@mui/material";
+import CircularProgress from '@mui/material/CircularProgress';
 
 const DetailRecommend = ({ media_type, id }) => {
   const { data, error, recommendList } = Hook(media_type, id);

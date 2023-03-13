@@ -3,7 +3,8 @@ import "../styles/globals.css";
 import "../styles/style.css";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { StyledEngineProvider } from "@mui/material";
+// import { StyledEngineProvider } from "@mui/material";
+import StyledEngineProvider from "@mui/material/StyledEngineProvider"
 
 import { Provider } from "react-redux";
 import { store } from "../modules";
