@@ -8,8 +8,6 @@ This is a web application built with Next.js that provides live movie informatio
 2.  Run `npm install` or `yarn` to install dependencies
 3.  Copy `.env.example` file to `.env.local` and fill in the necessary variables
 
-makefileCopy code
-
 `NEXT_PUBLIC_TMDB_API_KEY=<TMDB_API_KEY>
 ` 
 
