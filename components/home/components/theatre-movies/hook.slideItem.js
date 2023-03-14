@@ -8,7 +8,7 @@ const Hook = (id, backdrop_path) => {
     const {gmd_data  , gmd_error , gmd_loading} = getMovieDetail(id);
 
     const tagline = gmd_data?.tagline;
-    const poster_path = `${TMDB_IMG}${TMDB_IMG_RES.poster_sizes[2]}/${gmd_data?.poster_path}`;
+    const poster_path = `${TMDB_IMG}${TMDB_IMG_RES.poster_sizes[4]}/${gmd_data?.poster_path}`;
     const rating = gmd_data?.vote_average;
     const imdbRating = gmd_data?.imdb_id;
     const backgroundImg = `${TMDB_IMG}${TMDB_IMG_RES.backdrop_sizes[2]}/${backdrop_path}`;

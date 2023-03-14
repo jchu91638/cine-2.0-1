@@ -17,7 +17,7 @@ const Hook = (vote_avg, media_type) => {
 
     let route_type = media_type === 'tv' ? 'series' : 'movies';
 
-    let poster_path = `${TMDB_IMG}${TMDB_IMG_RES.poster_sizes[2]}`
+    let poster_path = `${TMDB_IMG}${TMDB_IMG_RES.poster_sizes[4]}`
 
     return {
         vote_border,
