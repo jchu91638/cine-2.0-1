@@ -1,18 +1,22 @@
-import React from 'react';
-
 /* Utils */
-import { fetchTorrent } from '../../../../util/fetchTorrent';
+import { fetchTorrent } from "../../../../util/fetchTorrent";
 
 const Hook = (imdbID) => {
+  const { data, error, torrentList } = fetchTorrent(imdbID);
 
-    const { data, error, torrentList } = fetchTorrent(imdbID);
+  const bluray_type = torrentList.filter((movie) => movie.type === "bluray");
+  const web_type = torrentList.filter((movie) => movie.type === "web");
 
-    return {
-        data,
-        error,
+  console.log({data})
 
-        torrentList
-    }
-}
+  return {
+    data,
+    error,
+
+    torrentList,
+    bluray_type,
+    web_type
+  };
+};
 
 export default Hook;

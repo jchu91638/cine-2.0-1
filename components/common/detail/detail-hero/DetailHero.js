@@ -50,106 +50,108 @@ const DetailHero = ({
                   alt={`${title}'s poster`}
                 />
               </div>
-              <div className="flex flex-col gap-y-8">
-                <div>
+              <div className="flex flex-col lg:flex-row gap-y-8">
+                <div className="flex flex-col flex-[6] gap-y-8">
                   <div>
-                    <h1 className="text-cfs-5 lg:text-4xl font-heading font-bold mb-2 flex gap-x-4 flex-wrap items-end">
-                      <span>{title}</span>
-                      <span className="text-cfs-4 lg:text-cfs-5 font-normal">
-                        ( {releasedYear} )
-                      </span>
-                    </h1>
-                  </div>
-
-                  <div className="flex flex-wrap gap-x-4 gap-y-2 items-center justify-start lg:justify-start">
-                    {contentRating && (
-                      <div className="text-[12px] lg:text-cfs-1 border border-solid border-warning text-warning font-bold p-[2px]">
-                        <p>{contentRating}</p>
-                      </div>
-                    )}
-
-                    <p className="">
-                      <span className="flex flex-wrap gap-1">
-                        {genres?.map((item) => {
-                          let type =
-                            item.name === "Science Fiction"
-                              ? "Sci-fi"
-                              : item.name;
-                          return (
-                            <Link
-                              key={item.name}
-                              href={`/discover/movies/${type.toLowerCase()}`}
-                            >
-                              <span className="border border-solid border-light rounded-full text-sm py-[2.5px] px-[5px] cursor-pointer">
-                                {type}
-                              </span>
-                            </Link>
-                          );
-                        })}
-                      </span>
-                    </p>
-
                     <div>
-                      {runtime !== "m" && runtime !== "undefinedm" && (
-                        <p className="flex justify-center items-center gap-x-1 text-[0.8rem] lg:text-cfs-1">
-                          <AccessTimeSharpIcon className="w-4" />
-                          {runtime}
-                        </p>
-                      )}
-                      {status === "In Production" && (
-                        <p className="uppercase font-bold text-warning">
-                          Coming Soon
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex flex-col gap-y-4">
-                  <div className="flex flex-col gap-y-4">
-                    <div>
-                      {tagline && (
-                        <p className="font-bold text-gray italic">
-                          &ldquo; {tagline} &rdquo;
-                        </p>
-                      )}
-                    </div>
-                    <div className="w-fll lg:w-1/2">
-                      <h1 className="text-gray text-cfs-3 lg:text-cfs-4 font-bold font-heading mb-1">
-                        Overview
+                      <h1 className="text-cfs-5 lg:text-4xl font-heading font-bold mb-2 flex gap-x-4 flex-wrap items-end">
+                        <span>{title}</span>
+                        <span className="text-cfs-4 lg:text-cfs-5 font-normal">
+                          ( {releasedYear} )
+                        </span>
                       </h1>
-                      <p>{overview}</p>
+                    </div>
+
+                    <div className="flex flex-wrap gap-x-4 gap-y-2 items-center justify-start lg:justify-start">
+                      {contentRating && (
+                        <div className="text-[12px] lg:text-cfs-1 border border-solid border-warning text-warning font-bold p-[2px]">
+                          <p>{contentRating}</p>
+                        </div>
+                      )}
+
+                      <p className="">
+                        <span className="flex flex-wrap gap-1">
+                          {genres?.map((item) => {
+                            let type =
+                              item.name === "Science Fiction"
+                                ? "Sci-fi"
+                                : item.name;
+                            return (
+                              <Link
+                                key={item.name}
+                                href={`/discover/movies/${type.toLowerCase()}`}
+                              >
+                                <span className="border border-solid border-light rounded-full text-sm py-[2.5px] px-[5px] cursor-pointer">
+                                  {type}
+                                </span>
+                              </Link>
+                            );
+                          })}
+                        </span>
+                      </p>
+
+                      <div>
+                        {runtime !== "m" && runtime !== "undefinedm" && (
+                          <p className="flex justify-center items-center gap-x-1 text-[0.8rem] lg:text-cfs-1">
+                            <AccessTimeSharpIcon className="w-4" />
+                            {runtime}
+                          </p>
+                        )}
+                        {status === "In Production" && (
+                          <p className="uppercase font-bold text-warning">
+                            Coming Soon
+                          </p>
+                        )}
+                      </div>
                     </div>
                   </div>
 
-                  <div className="flex gap-x-4">
-                    <div className="inline-flex gap-y-2">
-                      <StarRateRoundedIcon className="w-8" />
-                      <p className="text-cfs-2 font-bold  flex justify-center items-center">
-                        {rating}
-                      </p>
+                  <div className="flex flex-col gap-y-4">
+                    <div className="flex flex-col gap-y-4">
+                      <div>
+                        {tagline && (
+                          <p className="font-bold text-gray italic">
+                            &ldquo; {tagline} &rdquo;
+                          </p>
+                        )}
+                      </div>
+                      <div className="w-fll lg:w-1/2">
+                        <h1 className="text-gray text-cfs-3 lg:text-cfs-4 font-bold font-heading mb-1">
+                          Overview
+                        </h1>
+                        <p>{overview}</p>
+                      </div>
                     </div>
 
-                    <div className="inline-flex gap-y-2">
-                      <PeopleIcon className="w-8" />
-                      <p className="text-cfs-2 font-bold flex justify-center items-center">
-                        {popularity}
-                      </p>
+                    <div className="flex gap-x-4">
+                      <div className="inline-flex gap-y-2">
+                        <StarRateRoundedIcon className="w-8" />
+                        <p className="text-cfs-2 font-bold  flex justify-center items-center">
+                          {rating}
+                        </p>
+                      </div>
+
+                      <div className="inline-flex gap-y-2">
+                        <PeopleIcon className="w-8" />
+                        <p className="text-cfs-2 font-bold flex justify-center items-center">
+                          {popularity}
+                        </p>
+                      </div>
                     </div>
+
+                    <Button
+                      onClick={() => open_YTPopUp()}
+                      className="btn-outline"
+                    >
+                      View Trailer
+                    </Button>
                   </div>
-
-                  <Button
-                    onClick={() => open_YTPopUp()}
-                    className="btn-outline"
-                  >
-                    View Trailer
-                  </Button>
                 </div>
 
                 {!isSeries && (
-                  <div>
+                  <div className="flex-[4] lg:self-center">
                     <h1 className="text-gray text-cfs-3 lg:text-cfs-4 font-bold font-heading  mb-1">
-                      Download
+                      Download torrent
                     </h1>
 
                     <DetailTorrent imdbID={imdbID} />

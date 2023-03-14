@@ -46,7 +46,6 @@ const MovieDetail = ({ id, movie }) => {
   const title = movie.original_title;
   const backdrop_path = `https://www.themoviedb.org/t/p/original${movie.backdrop_path}`;
   const overview = movie.overview;
-  console.log({ movie });
 
   return (
     <>
