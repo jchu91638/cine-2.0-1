@@ -46,7 +46,7 @@ const MovieDetail = ({ id, movie }) => {
   const title = movie.original_title;
   const backdrop_path = `https://www.themoviedb.org/t/p/original${movie.backdrop_path}`;
   const overview = movie.overview;
-  console.log({movie})
+  console.log({ movie });
 
   return (
     <>
@@ -74,10 +74,14 @@ const MovieDetail = ({ id, movie }) => {
         <meta property="twitter:description" content={overview} />
         <meta property="twitter:image" content={backdrop_path} />
       </Head>
-      {/* className="mt-[70px] lg:mt-[60px]" */}
       <section>
-        <MovieDetailPage movieId={id} movieData={movie} />
-        {/* <h1>{title}</h1> */}
+        {movie ? (
+          <MovieDetailPage movieId={id} movieData={movie} />
+        ) : (
+          <div className="h-screen">
+            The movie info is not available for now.
+          </div>
+        )}
       </section>
     </>
   );
