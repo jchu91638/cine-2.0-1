@@ -1,34 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next JS Live Movie Information App
 
-## Getting Started
+This is a web application built with Next.js that provides live movie information and movie torrents using the TMDB API and YTS API respectively. The project also uses Tailwind CSS and MUI components.
 
-First, run the development server:
+## Installation
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+1.  Clone the repository
+2.  Run `npm install` or `yarn` to install dependencies
+3.  Copy `.env.example` file to `.env.local` and fill in the necessary variables
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+makefileCopy code
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+`NEXT_PUBLIC_TMDB_API_KEY=<TMDB_API_KEY>
+` 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Usage
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1.  Run `npm run dev` or `yarn dev` to start the development server
+2.  Open your browser and navigate to `http://localhost:3000`
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+-   Browse movies by popularity, top-rated, now playing and upcoming
+-   Search movies by title
+-   View movie details including title, overview, rating, release date, runtime, genres and cast
+-   Watch movie trailers on YouTube
+-   View and download movie torrents
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+-   Next.js
+-   Tailwind CSS
+-   MUI components
+-   TMDB API
+-   YTS API
 
-## Deploy on Vercel
+## Contributions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are welcome! If you would like to contribute to this project, please create a pull request. 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## This product uses the TMDB API but is not endorsed or certified by TMDB.
