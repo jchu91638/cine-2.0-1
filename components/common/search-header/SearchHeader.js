@@ -4,6 +4,9 @@ import Link from "next/link";
 /* constants */
 import { TMDB_IMG, TMDB_IMG_RES } from "../../../constants/common";
 
+/* Icons */
+import InsertPhotoTwoToneIcon from "@mui/icons-material/InsertPhotoTwoTone";
+
 /* Components */
 import TextField from "@mui/material/TextField";
 
@@ -57,25 +60,34 @@ const SearchHeader = ({ query }) => {
               >
                 {suggestData_movie && (
                   <div>
-                    <p className="text-xs font-bold ml-1">Movies :</p>
+                    <p className="text-xs font-bold ml-1 text-secondary">
+                      Movies :
+                    </p>
                     <div className="flex gap-y-1 flex-col">
                       {suggestData_movie &&
                         suggestData_movie?.map((item, index) => {
                           return (
                             <div
-                              className="rounded cursor-pointer text-secondary border-transparent border border-solid p-2 bg-wah transition-all hover:text-primary hover:border-primary hover:bg-wah"
+                              className="rounded cursor-pointer text-secondary border-transparent border border-solid p-2 bg-wah transition-all hover:text-primary hover:bg-slate-200 hover:border-primary"
                               key={index}
                             >
                               <Link href={`/movies/${item.id}`}>
                                 <a>
                                   <div className="flex gap-3 items-center">
-                                    <Image
-                                      width={50}
-                                      height={70}
-                                      src={`${TMDB_IMG}${TMDB_IMG_RES.poster_sizes[1]}/${item.poster_path}`}
-                                      alt={item.name ? item.name : item.title}
-                                      className="flex-[4] object-cover shadow-md"
-                                    />
+                                    {item.poster_path ? (
+                                      <Image
+                                        width={50}
+                                        height={70}
+                                        src={`${TMDB_IMG}${TMDB_IMG_RES.poster_sizes[1]}/${item.poster_path}`}
+                                        alt={item.name ? item.name : item.title}
+                                        className="flex-[4] object-cover shadow-md rounded"
+                                      />
+                                    ) : (
+                                      <div className=" flex rounded bg-gray justify-center items-center text-primary w-[50px] h-[70px]">
+                                        <InsertPhotoTwoToneIcon />
+                                      </div>
+                                    )}
+
                                     <p className="flex-[6] line-clamp-1 overflow-ellipsis">
                                       {item.name ? item.name : item.title}
                                     </p>
@@ -90,25 +102,33 @@ const SearchHeader = ({ query }) => {
                 )}
 
                 {suggestData_tv && (
-                  <div>
-                    <p className="text-xs font-bold ml-1">Series :</p>
+                  <div className="mt-2">
+                    <p className="text-xs font-bold ml-1 text-secondary">
+                      Series :
+                    </p>
                     <div className="flex gap-y-1 flex-col">
                       {suggestData_tv?.map((item, index) => {
                         return (
                           <div
-                            className="rounded cursor-pointer text-secondary border-transparent border border-solid p-2 bg-wah transition-all hover:text-primary hover:border-primary hover:bg-wah"
+                            className="rounded cursor-pointer text-secondary border-transparent border border-solid p-2 bg-wah transition-all hover:text-primary hover:border-primary hover:bg-slate-200"
                             key={index}
                           >
                             <Link href={`/series/${item.id}`}>
                               <a>
                                 <div className="flex gap-3 items-center">
-                                  <Image
-                                    width={50}
-                                    height={70}
-                                    src={`${TMDB_IMG}${TMDB_IMG_RES.poster_sizes[1]}/${item.poster_path}`}
-                                    alt={item.name ? item.name : item.title}
-                                    className="flex-[4] object-cover shadow-md"
-                                  />
+                                  {item.poster_path ? (
+                                    <Image
+                                      width={50}
+                                      height={70}
+                                      src={`${TMDB_IMG}${TMDB_IMG_RES.poster_sizes[1]}/${item.poster_path}`}
+                                      alt={item.name ? item.name : item.title}
+                                      className="flex-[4] object-cover shadow-md rounded"
+                                    />
+                                  ) : (
+                                    <div className=" flex bg-gray rounded justify-center items-center text-primary w-[50px] h-[70px]">
+                                      <InsertPhotoTwoToneIcon />
+                                    </div>
+                                  )}
                                   <p className="flex-[6] line-clamp-1 overflow-ellipsis">
                                     {item.name ? item.name : item.title}
                                   </p>
