@@ -1,10 +1,13 @@
 import useSWR from "swr";
 
+/* constants */
+import { API_KEY } from "../../../../constants/common";
+
 /* Constants */
 import { languages } from "../../../../constants/common";
 
 const Hook = (media_type, id) => {
-  let url = `https://api.themoviedb.org/3/${media_type}/${id}?api_key=68d49bbc8d40fff0d6cafaa7bfd48072&append_to_response=external_ids,keywords`;
+  let url = `https://api.themoviedb.org/3/${media_type}/${id}?api_key=${API_KEY}&append_to_response=external_ids,keywords`;
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
   const { data, error } = useSWR(url, fetcher);
 

@@ -2,11 +2,14 @@ import useSWR from "swr";
 import Link from "next/link";
 import Image from "next/image";
 
+/* constant */
+import { API_KEY } from "../../../../constants/common";
+
 /* Icons */
 import InsertPhotoTwoToneIcon from "@mui/icons-material/InsertPhotoTwoTone";
 
 const Hook = (media_type, id) => {
-  let url = `https://api.themoviedb.org/3/${media_type}/${id}/recommendations?api_key=68d49bbc8d40fff0d6cafaa7bfd48072&language=en-US`;
+  let url = `https://api.themoviedb.org/3/${media_type}/${id}/recommendations?api_key=${API_KEY}&language=en-US`;
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
   const { data, error } = useSWR(url, fetcher);
 

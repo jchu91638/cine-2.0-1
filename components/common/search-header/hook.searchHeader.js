@@ -2,6 +2,9 @@ import { useState, useEffect } from "react";
 import useSWR from "swr";
 import { useRouter } from "next/router";
 
+/* constants */
+import { API_KEY } from "../../../constants/common";
+
 const Hook = (query) => {
   const [displaySuggest, setDisplaySuggest] = useState(false);
   const [formValue, setFormVal] = useState("");
@@ -19,9 +22,9 @@ const Hook = (query) => {
 
   let searchValue = formValue.trim();
   if (searchValue.length === 0) {
-    url = `https://api.themoviedb.org/3/search/multi?api_key=68d49bbc8d40fff0d6cafaa7bfd48072&query=demo`;
+    url = `https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&query=demo`;
   } else {
-    url = `https://api.themoviedb.org/3/search/multi?api_key=68d49bbc8d40fff0d6cafaa7bfd48072&query=${searchValue}`;
+    url = `https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&query=${searchValue}`;
   }
 
   const fetcher = (...args) => fetch(...args).then((res) => res.json());
