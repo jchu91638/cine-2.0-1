@@ -19,6 +19,7 @@ module.exports = {
         light: "#21E6C1",
         dark: "#071E3D",
         black: "#1c2a30",
+        "pri-dark": "#002B3F",
         wah: "#ffffff",
         gray: "#ebebeb",
         warning: "#dacd18",

@@ -327,6 +327,7 @@ button {
 
 /* Footer */
 .footer {
-  background: linear-gradient(90deg,#071e3d,#1f4287);
+  /* background: linear-gradient(90deg,#071e3d,#1f4287); */
+  background:#002B3F;
   color: #fff;
 }
