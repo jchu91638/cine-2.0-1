@@ -71,7 +71,7 @@ const CastsCrews = ({ media_type, id }) => {
               })}
 
               <SwiperSlide>
-                <div className=" min-h-[250px] w-[6.875rem] lg:w-auto lg:min-h-[280px] bg-black rounded border-light flex flex-col justify-center items-center  border border-solid text-white">
+                <div className=" min-h-[250px] w-[6.875rem] lg:w-auto lg:min-h-[250px] bg-black rounded border-light flex flex-col justify-center items-center  border border-solid text-white">
                   <p className="text-center">View all credits</p>
 
                   <ArrowCircleRightIcon />
