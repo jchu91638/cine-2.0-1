@@ -115,7 +115,7 @@ const DetailHero = ({
                           </p>
                         )}
                       </div>
-                      <div className="w-fll lg:w-1/2">
+                      <div className="w-fll lg:w-11/12">
                         <h1 className="text-gray text-cfs-3 lg:text-cfs-4 font-bold font-heading mb-1">
                           Overview
                         </h1>
