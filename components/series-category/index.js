@@ -24,8 +24,6 @@ const SeriesCategory = () => {
     setCurrentData,
   } = Hook();
 
-  console.log({ currentData });
-
   return (
     <>
       <SearchHeader query="" />

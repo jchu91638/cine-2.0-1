@@ -24,8 +24,6 @@ const MovieCategory = () => {
     setCurrentData,
   } = Hook();
 
-  console.log({ currentData });
-
   return (
     <>
       <SearchHeader query="" />
