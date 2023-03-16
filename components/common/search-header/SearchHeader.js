@@ -20,6 +20,7 @@ const SearchHeader = ({ query }) => {
     suggestData_movie,
     suggestData_tv,
     holderValue,
+    suggestIndex,
 
     /* actions */
     setFormVal,
@@ -27,6 +28,7 @@ const SearchHeader = ({ query }) => {
     handleOnChangeInput,
     handleSuggestion,
     setHolderValue,
+    handleKeyDown,
   } = Hook(query);
 
   return (
@@ -48,6 +50,7 @@ const SearchHeader = ({ query }) => {
                   handleOnChangeInput(e);
                 }, 1500);
               }}
+              onKeyDown={handleKeyDown}
             />
 
             {(suggestData_movie || suggestData_tv) && (
@@ -68,7 +71,9 @@ const SearchHeader = ({ query }) => {
                         suggestData_movie?.map((item, index) => {
                           return (
                             <div
-                              className="rounded cursor-pointer text-secondary border-transparent border border-solid p-2 bg-wah transition-all hover:text-primary hover:bg-slate-200 hover:border-primary"
+                              className={`rounded cursor-pointer text-secondary border-transparent border border-solid p-2  transition-all hover:text-primary hover:bg-slate-200 hover:border-primary ${
+                                suggestIndex === index+1 ? "bg-gray shadow" : "bg-wah"
+                              }`}
                               key={index}
                             >
                               <Link href={`/movies/${item.id}`}>
@@ -110,7 +115,9 @@ const SearchHeader = ({ query }) => {
                       {suggestData_tv?.map((item, index) => {
                         return (
                           <div
-                            className="rounded cursor-pointer text-secondary border-transparent border border-solid p-2 bg-wah transition-all hover:text-primary hover:border-primary hover:bg-slate-200"
+                            className={`rounded cursor-pointer text-secondary border-transparent border border-solid p-2 transition-all hover:text-primary hover:border-primary hover:bg-slate-200 ${
+                              suggestIndex === index+6 ? "bg-gray shadow" : "bg-wah"
+                            }`}
                             key={index}
                           >
                             <Link href={`/series/${item.id}`}>

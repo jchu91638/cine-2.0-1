@@ -63,7 +63,7 @@ const Hook = (query) => {
     e.preventDefault();
     let trimedVal = holderValue.trim();
 
-    if (trimedVal.length !== 0) {
+    if (trimedVal.length !== 0 && suggestIndex === 0) {
       router.push(`/search/${trimedVal}/1`);
       setDisplaySuggest(false);
     }
@@ -84,7 +84,40 @@ const Hook = (query) => {
     router.push(`/search/${value}/1`);
   };
 
-  console.log({ suggestData_movie, suggestData_tv });
+  const [suggestIndex, setSuggestIndex] = useState(0);
+
+  const handleKeyDown = (event) => {
+    let suggestions =
+      (suggestData_movie.length > 0 || suggestData_tv.length > 0) &&
+      suggestData_movie?.concat(suggestData_tv);
+
+    if (event.key === "ArrowUp") {
+      if (suggestIndex <= suggestions?.length && suggestIndex > 0) {
+        setSuggestIndex((prev) => prev - 1);
+      }
+      // console.log({ suggestIndex }, "Up");
+    } else if (event.key === "ArrowDown") {
+      if (suggestIndex >= 0 && suggestIndex < suggestions?.length) {
+        setSuggestIndex((prev) => prev + 1);
+      }
+      // console.log({ suggestIndex }, "Down");
+    } else if (event.key === "Enter" && suggestIndex !== -1) {
+      // let suggestions = suggestData_movie.concat(suggestData_tv);
+      let type = "movies";
+      if (suggestIndex >= 6) {
+        type = "series";
+      } else {
+        type = "movies";
+      }
+
+      // console.log(`${suggestIndex} is entered.`);
+
+      if (suggestIndex > 0 && suggestIndex <= suggestions.length) {
+        console.log({ suggestIndex, length: suggestions.length });
+        router.push(`/${type}/${suggestions[suggestIndex - 1].id}`);
+      }
+    }
+  };
 
   return {
     formValue,
@@ -92,6 +125,7 @@ const Hook = (query) => {
     suggestData_movie,
     suggestData_tv,
     holderValue,
+    suggestIndex,
 
     /* actions */
     setFormVal,
@@ -99,6 +133,7 @@ const Hook = (query) => {
     handleOnChangeInput,
     handleSuggestion,
     setHolderValue,
+    handleKeyDown,
   };
 };
 
