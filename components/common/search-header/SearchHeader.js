@@ -53,15 +53,15 @@ const SearchHeader = ({ query }) => {
               onKeyDown={handleKeyDown}
             />
 
-            {(suggestData_movie || suggestData_tv) && (
+            {(suggestData_movie?.length > 0 || suggestData_tv?.length > 0) && (
               <div
-                className={`absolute w-[90%] lg:w-[25%] flex gap-y-1 flex-col z-[500] bg-white cus-box-shadow p-1 rounded max-h-[500px] overflow-scroll ${
+                className={`absolute w-[90%] lg:w-[25%] flex gap-y-1 flex-col z-[500] bg-white cus-box-shadow p-1 rounded max-h-[500px] overflow-y-scroll ${
                   displaySuggest
                     ? "visible opacity-100"
                     : " invisible opacity-0"
                 }`}
               >
-                {suggestData_movie && (
+                {suggestData_movie?.length > 0 && (
                   <div>
                     <p className="text-xs font-bold ml-1 text-secondary">
                       Movies :
@@ -72,7 +72,9 @@ const SearchHeader = ({ query }) => {
                           return (
                             <div
                               className={`rounded cursor-pointer text-secondary border-transparent border border-solid p-2  transition-all hover:text-primary hover:bg-slate-200 hover:border-primary ${
-                                suggestIndex === index+1 ? "bg-gray shadow" : "bg-wah"
+                                suggestIndex === index + 1
+                                  ? "bg-gray shadow"
+                                  : "bg-wah"
                               }`}
                               key={index}
                             >
@@ -106,7 +108,7 @@ const SearchHeader = ({ query }) => {
                   </div>
                 )}
 
-                {suggestData_tv && (
+                {suggestData_tv?.length > 0 && (
                   <div className="mt-2">
                     <p className="text-xs font-bold ml-1 text-secondary">
                       Series :
@@ -116,7 +118,9 @@ const SearchHeader = ({ query }) => {
                         return (
                           <div
                             className={`rounded cursor-pointer text-secondary border-transparent border border-solid p-2 transition-all hover:text-primary hover:border-primary hover:bg-slate-200 ${
-                              suggestIndex === index+6 ? "bg-gray shadow" : "bg-wah"
+                              suggestIndex === index + 6
+                                ? "bg-gray shadow"
+                                : "bg-wah"
                             }`}
                             key={index}
                           >
