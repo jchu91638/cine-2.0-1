@@ -55,6 +55,7 @@ module.exports = {
     // ...
     require("@tailwindcss/line-clamp"),
     require("tailwindcss-debug-screens"),
+    require("daisyui"),
     function ({ addVariant }) {
       addVariant("child", "& > *");
       addVariant("child-hover", "& > *:hover");
