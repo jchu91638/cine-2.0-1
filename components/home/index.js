@@ -6,6 +6,7 @@ import SearchInput from "./components/search-input/SearchInput";
 import PopularNow from "./components/popular-now/PopularNow";
 import TheatreMovies from "./components/theatre-movies/TheatreMovies";
 import UpComingMovies from "./components/upcoming-movies/UpcomingMovies";
+import FaqSection from "./components/FAQ";
 
 /* Hook */
 import Hook from "./hook.home";
@@ -68,6 +69,8 @@ const HomePage = () => {
       />
 
       <TheatreMovies data={tm_data} loading={tm_loading} error={tm_error} />
+
+      <FaqSection/>
 
       <UpComingMovies data={gum_data} loading={gum_loading} error={gum_error} />
     </>

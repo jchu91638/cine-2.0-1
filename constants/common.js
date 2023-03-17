@@ -1124,3 +1124,32 @@ export const seriesCategoryList = [
   },
 ];
 // {"genres":[{"id":10759,"name":"Action & Adventure"},{"id":16,"name":"Animation"},{"id":35,"name":"Comedy"},{"id":80,"name":"Crime"},{"id":99,"name":"Documentary"},{"id":18,"name":"Drama"},{"id":10751,"name":"Family"},{"id":10762,"name":"Kids"},{"id":9648,"name":"Mystery"},{"id":10763,"name":"News"},{"id":10764,"name":"Reality"},{"id":10765,"name":"Sci-Fi & Fantasy"},{"id":10766,"name":"Soap"},{"id":10767,"name":"Talk"},{"id":10768,"name":"War & Politics"},{"id":37,"name":"Western"}]}
+
+export const faqlist = [
+  {
+    question: "What is the TMDB API?",
+    answer:
+      "The TMDB API is a programming interface that allows developers to access the data in the TMDB database and use it in their own applications. To use the TMDB API, you will need to create an account on the TMDB website and obtain an API key. You can then use this key to access the API and retrieve data from the TMDB database. The TMDB API allows you to retrieve a wide range of data about movies, TV shows, and other media, including information about cast and crew, reviews, ratings, trailers, and more.",
+  },
+  {
+    question:
+      "Can I use the TMDB API to build my own movie or TV show database?",
+    answer:
+      "Yes, you can use the TMDB API to build your own database of movie and TV show information. However, you should be aware that you will need to comply with TMDB's terms of service and provide attribution for the data you use. The TMDB API is free to use for non-commercial purposes, but you may need to pay a fee if you use it for commercial purposes or if you need to make a large number of API calls. you can use the TMDB API to retrieve images such as movie posters and stills. However, you should be aware that there may be licensing restrictions on how you can use these images.",
+  },
+  {
+    question: "How do I use the TMDB API in my own website or application?",
+    answer:
+      "To use the TMDB API in your website or application, you will need to make HTTP requests to the API using your API key. You can then parse the JSON data returned by the API and use it to display movie and TV show information on your site.  there are some limitations on how you can use the TMDB API, such as rate limits on API calls and restrictions on how you can use the data retrieved from the API. You should review TMDB's terms of service before using the API in your own projects.",
+  },
+
+  {
+    question: "What is the YTS movie torrent API?",
+    answer:
+      'YTS stands for YIFY Torrents, a popular torrent website that was shut down in 2015. However, the name "YTS" is still used by some websites and apps that provide movie torrents and related services. The YTS movie torrent API is a programming interface that allows developers to access the data in the YTS database and retrieve information about movies, including details such as title, genre, rating, and download links.',
+  },
+  {
+    question: "Are TMDB api and YTS torrent api the same? What are the differences?",
+    answer: "No, TMDB API and YTS torrent API are not the same.TMDB API is an API provided by The Movie Database (TMDb) that allows developers to access and retrieve movie and TV show data, including details such as title, overview, release date, cast, crew, ratings, and more. TMDB API does not provide download links for movies or TV shows. On the other hand, YTS torrent API is an API that provides download links for movie torrents. It allows developers to access the data in the YTS database and retrieve information about movies, including details such as title, genre, rating, and download links. The main difference between the two APIs is that TMDB API provides information about movies and TV shows, while YTS torrent API provides download links for movie torrents. Additionally, TMDB API provides more detailed information about movies and TV shows, such as cast and crew information, while YTS torrent API is focused solely on providing download links for movie torrents."
+  }
+];
