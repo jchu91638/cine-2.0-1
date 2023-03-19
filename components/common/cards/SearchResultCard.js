@@ -4,6 +4,9 @@ import { useRouter } from "next/router";
 /* Icons */
 import InsertPhotoTwoToneIcon from "@mui/icons-material/InsertPhotoTwoTone";
 
+/* constants */
+import { TMDB_IMG_RES } from "../../../constants/common";
+
 const SearchResultCard = ({ id, title, image, name, isSeries }) => {
   const router = useRouter();
 
@@ -25,7 +28,7 @@ const SearchResultCard = ({ id, title, image, name, isSeries }) => {
             <Image
               layout="fill"
               quality="10"
-              src={`https://www.themoviedb.org/t/p/w185/${image}`}
+              src={`https://www.themoviedb.org/t/p/${TMDB_IMG_RES.poster_sizes[3]}/${image}`}
               alt={`${title} poster`}
               className=""
             />
@@ -38,7 +41,7 @@ const SearchResultCard = ({ id, title, image, name, isSeries }) => {
       </div>
 
       <div>
-        <h1 className="text-white whitespace-nowrap overflow-hidden overflow-ellipsis text-sm">
+        <h1 className="text-white whitespace-nowrap overflow-hidden overflow-ellipsis text-sm font-semibold">
           {title ? title : name}
         </h1>
       </div>

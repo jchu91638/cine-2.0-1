@@ -27,7 +27,7 @@ module.exports = {
         "light-overlay": "rgba(#21E6C1, 0.1)",
       },
       fontFamily: {
-        primary: ["Nunito", "sans-serif"],
+        primary: ["Sora", "sans-serif"],
         heading: ["Catamaran", "sans-serif"],
         writing: ["Yellowtail", "cursive"],
         special: ["Cairo", "sans-serif"],

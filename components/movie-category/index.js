@@ -41,7 +41,7 @@ const MovieCategory = () => {
                     onClick={() => {
                       setPageNo(1);
                     }}
-                    className={`text-wah cursor-pointer border border-solid border-light rounded-full lg:px-2 lg:py-1 min-w-[6rem] text-sm p-1 flex justify-center items-center font-bold ${
+                    className={`text-wah cursor-pointer border border-solid border-light rounded-full lg:px-2 lg:py-1 min-w-[6rem] text-sm p-1 flex justify-center items-center font-semibold ${
                       currentCategory === category.title && "bg-primary"
                     }`}
                   >
