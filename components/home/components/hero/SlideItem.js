@@ -82,7 +82,7 @@ const SlideItem = ({
             </p>
 
             <Link href={`/${route_type}/${id}`}>
-              <Button variant="contained" className="btn-primary">
+              <Button variant="contained mr-auto" className="btn-primary">
                 View Detail
               </Button>
             </Link>
