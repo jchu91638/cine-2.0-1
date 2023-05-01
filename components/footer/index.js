@@ -41,7 +41,12 @@ const Footer = () => {
 
             <p className="mt-6">
               Developed and designed by{" "}
-              <a className="font-bold" href="https://tenyain.com/" target="_blank">
+              <a
+                className="font-bold"
+                href="https://tenyain.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 TeNyain
               </a>{" "}
               using TMDB and YTS APIs.
