@@ -34,7 +34,7 @@ const UpcomingItem = ({ id, title, poster_path, overview, release_date }) => {
             </a>
           </Link>
 
-          <p className="line-clamp-2 overflow-ellipsis">{overview}</p>
+          <p className="line-clamp-2 overflow-ellipsis text-dark">{overview}</p>
         </div>
       </div>
     </div>

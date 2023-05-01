@@ -86,7 +86,7 @@ const DetailInfo = ({ media_type, id }) => {
               )}
             </div>
           </div>
-          <div className="flex flex-col gap-y-3">
+          <div className="flex flex-col gap-y-3 text-dark">
             <div className="">
               <p className="font-bold text-base mb-[2px]">Status</p>
               <p className="text-base flex">{status}</p>
