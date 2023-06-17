@@ -17,7 +17,7 @@
     }
 
     .btn-primary {
-        @apply bg-danger capitalize font-primary font-bold text-cfs-1 hover:bg-danger hover:bg-opacity-80;
+        @apply bg-danger px-7 py-3 rounded-full capitalize font-primary font-light text-cfs-1 hover:bg-danger hover:bg-opacity-80 text-sm;
     }
 
     .btn-outline {

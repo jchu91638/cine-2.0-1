@@ -40,11 +40,11 @@ const SlideItem = ({
               </span>{" "}
               on board
             </p>
-            <h1 className="font-heading font-extrabold text-3xl lg:text-4xl drop-shadow-text">
+            <h1 className="font-special font-extrabold text-3xl lg:text-7xl drop-shadow-text">
               {title ? title : name}
             </h1>
 
-            <p className="w-full md:w-[55%] lg:w-[45%] drop-shadow-text">
+            <p className="w-full font-light md:w-[55%] lg:w-[45%] drop-shadow-text text-gray line-clamp-5">
               {overview}
             </p>
 
@@ -77,7 +77,7 @@ const SlideItem = ({
               {title ? title : name}
             </h1>
 
-            <p className="w-full md:w-[55%] lg:w-[45%] drop-shadow-text line-clamp-5">
+            <p className="w-full md:w-[55%] lg:w-[45%] font-light drop-shadow-text line-clamp-5">
               {overview}
             </p>
 
