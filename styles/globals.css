@@ -20,6 +20,10 @@
         @apply bg-danger px-7 py-3 rounded-full capitalize font-primary font-light text-cfs-1 hover:bg-danger hover:bg-opacity-80 text-sm;
     }
 
+    .btn-search {
+        @apply bg-danger px-7 py-3 text-wah font-bold capitalize font-primary text-cfs-1 hover:bg-danger hover:bg-opacity-80 text-sm;
+    }
+
     .btn-outline {
         @apply bg-transparent inline-flex font-primary border-2 border-solid font-bold text-cfs-1 capitalize border-primary text-primary min-w-[70px] w-[11rem];
     }
