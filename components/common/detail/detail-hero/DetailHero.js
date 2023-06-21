@@ -127,7 +127,7 @@ const DetailHero = ({
                       <div className="inline-flex gap-y-2">
                         <StarRateRoundedIcon className="w-8" />
                         <p className="text-cfs-2 font-bold  flex justify-center items-center">
-                          {rating}
+                          {rating?.toFixed(1)}
                         </p>
                       </div>
 

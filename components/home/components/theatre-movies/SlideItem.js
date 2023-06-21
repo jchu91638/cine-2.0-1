@@ -31,7 +31,7 @@ const SlideItem = ({ id, title, backdrop_path, media_type, overview }) => {
     <div className="bg-[#21282b] group group-trailer hover:bg-black pb-6 lg:pb-12 transition-all duration-300 ease-out select-none">
       <div
         style={{ backgroundImage: `url(${backgroundImg})` }}
-        className="relative min-h-[200px] md:min-h-[400px] 2xl:min-h-[550px] bg-center bg-no-repeat bg-cover bg-scroll select-none flex items-end"
+        className="relative min-h-[300px] md:min-h-[500px] 2xl:min-h-[550px] bg-center bg-no-repeat bg-cover bg-scroll select-none flex items-end"
       >
         <TheatreTrailer
           trailer={trailer}
@@ -68,23 +68,27 @@ const SlideItem = ({ id, title, backdrop_path, media_type, overview }) => {
 
         <div className="w-full ml-5 pb-0 md:pb-8 flex justify-between">
           <div>
-            <Link href={`/movies/${id}`}>
-              <a>
-                <h1 className="font-special cursor-pointer font-extrabold text-white special-text-shadow title-3">
-                  {title}
-                </h1>
-              </a>
-            </Link>
-            <p className="text-white mt-2 font-heading font-bold text-sm md:text-[18px]">
-              {tagline}
-            </p>
+            <div className="mb-4">
+              <Link href={`/movies/${id}`}>
+                <a>
+                  <h1 className="font-special cursor-pointer font-extrabold text-white special-text-shadow title-3">
+                    {title}
+                  </h1>
+                </a>
+              </Link>
+              {tagline && (
+                <p className="text-gray mt-2 font-heading font-medium text-sm md:text-[18px]">
+                  “ {tagline} ”
+                </p>
+              )}
+            </div>
 
-            <div className="flex mt-3">
+            <div className="flex mt-4">
               <div className="flex justify-start items-center mr-8 text-warning">
                 <span>
                   <StarRateRoundedIcon />
                 </span>
-                <h1 className="text-wah text-lg">{rating}</h1>
+                <h1 className="text-wah text-lg">{rating?.toFixed(1)}</h1>
               </div>
 
               <a
