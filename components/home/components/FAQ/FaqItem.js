@@ -46,8 +46,8 @@ const Accordion = ({ question, answer }) => {
         </svg>
       </div>
       {isOpen && (
-        <div className="p-4 border-t border-gray-300">
-          <p className="text-wah font-primary">{answer}</p>
+        <div className="p-4 pt-0 border-t border-gray-300">
+          <p className="text-wah font-thin font-primary text-sm">{answer}</p>
         </div>
       )}
     </div>
