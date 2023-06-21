@@ -113,7 +113,7 @@ const Hook = (query) => {
       // console.log(`${suggestIndex} is entered.`);
 
       if (suggestIndex > 0 && suggestIndex <= suggestions.length) {
-        console.log({ suggestIndex, length: suggestions.length });
+        // console.log({ suggestIndex, length: suggestions.length });
         router.push(`/${type}/${suggestions[suggestIndex - 1].id}`);
       }
     }

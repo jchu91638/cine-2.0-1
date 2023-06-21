@@ -89,9 +89,6 @@ const DetailHero = ({
                           })}
                         </span>
                       </p>
-                          {
-                            console.log({runtime})
-                          }
                       <div>
                         {runtime !== "m" && runtime !== "undefinedm" && runtime !== "NaNh NaNm" && (
                           <p className="flex justify-center items-center gap-x-1 text-[0.8rem] lg:text-cfs-1">
