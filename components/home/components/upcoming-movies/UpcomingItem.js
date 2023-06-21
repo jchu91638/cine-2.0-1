@@ -8,8 +8,8 @@ const UpcomingItem = ({ id, title, poster_path, overview, release_date }) => {
   return (
     <div className="bg-wah rounded-md overflow-hidden cus-box-shadow">
       <div className=" flex h-full">
-        <div className="flex-1 md:flex-2">
-          <div className="flex relative w-[100px] h-[150px]">
+        <div className="flex-[2] md:flex-2">
+          <div className="flex relative w-[100px] md:w-auto h-[180px]">
             <Image
               layout="fill"
               quality="10"
@@ -19,7 +19,7 @@ const UpcomingItem = ({ id, title, poster_path, overview, release_date }) => {
             />
           </div>
         </div>
-        <div className="flex-[4] px-3 py-5 flex flex-col justify-between items-start">
+        <div className="flex-[8] px-3 py-5 flex flex-col justify-between items-start">
           <Link href={`/${route_type}/${id}`}>
             <a>
               <div className="cursor-pointer">
@@ -34,7 +34,7 @@ const UpcomingItem = ({ id, title, poster_path, overview, release_date }) => {
             </a>
           </Link>
 
-          <p className="line-clamp-2 overflow-ellipsis text-dark">{overview}</p>
+          <p className="line-clamp-3 overflow-ellipsis text-sm text-dark">{overview}</p>
         </div>
       </div>
     </div>
