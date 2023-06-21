@@ -89,9 +89,11 @@ const DetailHero = ({
                           })}
                         </span>
                       </p>
-
+                          {
+                            console.log({runtime})
+                          }
                       <div>
-                        {runtime !== "m" && runtime !== "undefinedm" && (
+                        {runtime !== "m" && runtime !== "undefinedm" && runtime !== "NaNh NaNm" && (
                           <p className="flex justify-center items-center gap-x-1 text-[0.8rem] lg:text-cfs-1">
                             <AccessTimeSharpIcon className="w-4" />
                             {runtime}
@@ -110,16 +112,16 @@ const DetailHero = ({
                     <div className="flex flex-col gap-y-4">
                       <div>
                         {tagline && (
-                          <p className="font-bold text-gray italic">
+                          <p className="font-bold text-light italic">
                             &ldquo; {tagline} &rdquo;
                           </p>
                         )}
                       </div>
                       <div className="w-fll lg:w-11/12">
-                        <h1 className="text-gray text-cfs-3 lg:text-cfs-4 font-bold font-heading mb-1">
+                        <h1 className="text-wah text-cfs-3 lg:text-cfs-4 font-bold font-heading mb-1">
                           Overview
                         </h1>
-                        <p>{overview}</p>
+                        <p className="text-sm text-gray">{overview}</p>
                       </div>
                     </div>
 
@@ -134,7 +136,7 @@ const DetailHero = ({
                       <div className="inline-flex gap-y-2">
                         <PeopleIcon className="w-8" />
                         <p className="text-cfs-2 font-bold flex justify-center items-center">
-                          {popularity}
+                          {popularity?.toFixed(0)}
                         </p>
                       </div>
                     </div>
