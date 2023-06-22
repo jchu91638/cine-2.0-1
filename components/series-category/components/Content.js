@@ -1,12 +1,7 @@
 import React from "react";
-import Link from "next/link";
-import InfiniteScroll from "react-infinite-scroll-component";
 
 /* Components */
 import SearchResultCard from "../../common/cards/SearchResultCard";
-
-/* Icons */
-import CircularProgress from '@mui/material/CircularProgress';
 
 const Content = ({
   currentCategory,
