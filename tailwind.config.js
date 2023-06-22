@@ -52,8 +52,6 @@ module.exports = {
     },
   },
   plugins: [
-    // ...
-    require("@tailwindcss/line-clamp"),
     require("tailwindcss-debug-screens"),
     require("daisyui"),
     function ({ addVariant }) {
