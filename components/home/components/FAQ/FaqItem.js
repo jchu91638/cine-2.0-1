@@ -47,7 +47,7 @@ const Accordion = ({ question, answer }) => {
       </div>
       {isOpen && (
         <div className="p-4 pt-0 border-t border-gray-300">
-          <p className="text-wah font-thin font-primary text-sm">{answer}</p>
+          <p className="text-gray opacity-90 font-normal font-primary text-sm">{answer}</p>
         </div>
       )}
     </div>
