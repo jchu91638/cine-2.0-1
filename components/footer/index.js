@@ -35,9 +35,6 @@ const Footer = () => {
               height={62}
               className="cursor-pointer"
             />
-            <p className="font-writing">
-              Live cinematic information and movie torrents.
-            </p>
 
             <p className="mt-6">
               Developed and designed by{" "}
@@ -54,8 +51,8 @@ const Footer = () => {
           </div>
           <div className="flex gap-5 flex-col">
             <div>
-              <h1 className="font-heading">Torrent Downloaders</h1>
-              <p>Download torrent files with this dowloaders.</p>
+              <h1 className="font-heading text-light">Torrent Downloaders</h1>
+              <p class="text-gray">Download torrent files with this dowloaders.</p>
             </div>
             <div className="flex gap-5 flex-wrap items-center">
               <a
@@ -106,7 +103,7 @@ const Footer = () => {
 
           <div className="flex flex-col gap-5">
             <div>
-              <p className="text-xl font-bold mb-3 font-heading">Site Map</p>
+              <p className="text-xl font-bold mb-3 font-heading text-light">Site Map</p>
               <ul className="flex gap-4 flex-wrap">
                 {navItems.map((item, index) => {
                   let routeToGo = () => {
@@ -147,7 +144,7 @@ const Footer = () => {
                 src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg"
                 alt="TMDB Logo"
               />
-              <p className="text-xs">
+              <p className="text-xs text-gray">
                 This product uses the TMDB API but is not endorsed or certified
                 by TMDB.
               </p>
