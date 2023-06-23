@@ -52,7 +52,7 @@ const Footer = () => {
           <div className="flex gap-5 flex-col">
             <div>
               <h1 className="font-heading text-light">Torrent Downloaders</h1>
-              <p class="text-gray">Download torrent files with this dowloaders.</p>
+              <p className="text-gray">Download torrent files with this dowloaders.</p>
             </div>
             <div className="flex gap-5 flex-wrap items-center">
               <a
