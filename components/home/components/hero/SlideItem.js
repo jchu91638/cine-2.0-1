@@ -40,7 +40,7 @@ const SlideItem = ({
               </span>{" "}
               on board
             </p>
-            <h1 className="font-special font-extrabold text-3xl lg:text-7xl drop-shadow-text">
+            <h1 className="font-special font-extrabold w-full lg:w-[70%] text-3xl lg:text-7xl drop-shadow-text">
               {title ? title : name}
             </h1>
 
